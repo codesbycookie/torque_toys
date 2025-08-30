@@ -5,6 +5,7 @@ import About from "../pages/AboutUs/AboutUs";
 import Products from "../pages/OurProducts/OurProducts";
 import Contact from "../pages/ContactUs/ContactUs";
 import Footer from "../pages/Components/Footer";
+import ProductDetail from "../pages/OurProducts/Components/ProductDetail";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/our-products" element={<Products />} />
+        <Route path="/our-products/:id" element={<ProductDetail />} />
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer />
