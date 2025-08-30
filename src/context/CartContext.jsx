@@ -7,10 +7,9 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  // Add to cart function
+  // Add to cart
   const addToCart = (product) => {
     setCart((prevCart) => {
-      // check if product already exists
       const existing = prevCart.find((item) => item.id === product.id);
       if (existing) {
         return prevCart.map((item) =>
@@ -29,8 +28,22 @@ export function CartProvider({ children }) {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
+  // ✅ Update quantity
+  const updateQuantity = (id, quantity) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, quantity: Number(quantity) } : item
+      )
+    );
+  };
+
+  // ✅ Clear cart after checkout
+  const clearCart = () => setCart([]);
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );

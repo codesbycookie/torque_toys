@@ -6,6 +6,7 @@ import Products from "../pages/OurProducts/OurProducts";
 import Contact from "../pages/ContactUs/ContactUs";
 import Footer from "../pages/Components/Footer";
 import ProductDetail from "../pages/OurProducts/Components/ProductDetail";
+import CartPage from "../pages/Cart/CartPage"
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/our-products" element={<Products />} />
         <Route path="/our-products/:id" element={<ProductDetail />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
       <Footer />
     </>
