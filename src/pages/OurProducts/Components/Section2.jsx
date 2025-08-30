@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { products } from "../../../data/productsData";
-import { useCart } from "../../../context/CartContext.js";
+import { useCart } from "../../../context/CartContext";
 
 export default function Section2() {
   const { addToCart } = useCart();
