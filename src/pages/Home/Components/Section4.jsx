@@ -1,16 +1,10 @@
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { homepage } from "../../../data/productsData";
 
-const products = [
-  { id: 1, name: "Action Figure", type: "Standard", price: 55 },
-  { id: 2, name: "Collector's Edition", type: "Limited", price: 55 },
-  { id: 3, name: "Vintage Model", type: "Classic", price: 55 },
-  { id: 4, name: "Premium Edition", type: "Exclusive", price: 55 },
-  { id: 5, name: "Rare Statue", type: "Exclusive", price: 75 },
-  { id: 6, name: "Golden Edition", type: "Classic", price: 120 },
-];
 
-export default function Section4() {
+export default function Section4({ content }) {
+  const products = content.products;
   const scrollRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -37,14 +31,14 @@ export default function Section4() {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-500">Collectibles</p>
-            <h2 className="text-3xl font-bold text-gray-900">Products</h2>
+            <p className="text-sm text-gray-500">{content.para1}</p>
+            <h2 className="text-3xl font-bold text-gray-900">{content.heading}</h2>
             <p className="mt-1 text-gray-600">
-              Explore our exclusive range of premium collectibles.
+              {content.description}
             </p>
           </div>
           <button className="px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition">
-            View all
+            {content.linkBtn}
           </button>
         </div>
 
@@ -54,17 +48,17 @@ export default function Section4() {
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
           >
-            {products.map((product) => (
+            {products.map((content) => (
               <div
-                key={product.id}
+                key={content.id}
                 className="min-w-[250px] flex-shrink-0 group"
               >
-                <div className="bg-gray-200 h-60 rounded-xl mb-4 flex items-center justify-center">
-                  <span className="text-gray-500">Image</span>
+                <div className=" h-60 rounded-xl mb-4 flex items-center justify-center">
+                  <img className="h-full w-100 object-contain bg-transparent" src={content.img} alt={content.name} />
                 </div>
-                <h3 className="text-lg font-semibold">{product.name}</h3>
-                <p className="text-sm text-gray-500">{product.type}</p>
-                <p className="mt-1 font-bold">${product.price}</p>
+                <h3 className="text-lg font-semibold">{content.name}</h3>
+                <p className="text-sm text-gray-500">{content.type}</p>
+                <p className="mt-1 font-bold">₹{content.price[0]} <span className="text-gray-500 line-through">₹{content.price[1]}</span></p>
               </div>
             ))}
           </div>

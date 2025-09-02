@@ -16,7 +16,7 @@ export default function Section2() {
           {products.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col md:flex-row items-center bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition"
+              className="flex flex-col md:flex-row items-center bg-white  rounded-2xl overflow-hidden hover:shadow-lg transition"
             >
               {/* Product Image */}
               <div className="w-full md:w-1/3">

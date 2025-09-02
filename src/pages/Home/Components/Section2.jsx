@@ -1,14 +1,14 @@
-import { Monitor, ShoppingCart, Mail } from "lucide-react"; // icons
+import { Monitor, ShoppingCart, Mail,Car } from "lucide-react"; 
+import { homepage } from "../../../data/productsData";
 
-export default function Section2() {
+export default function Section2({ content }) {
   return (
     <section className="bg-white py-20">
       <div className="container mx-auto px-6 text-center">
         
         {/* Section Heading */}
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-          Discover Exclusive Collectibles <br /> 
-          Crafted for the Discerning Collector
+         {content.title}
         </h2>
 
         {/* Features Grid */}
@@ -16,12 +16,12 @@ export default function Section2() {
           
           {/* Feature 1 */}
           <div className="flex flex-col items-center text-center">
-            <Monitor className="w-12 h-12 text-black" />
+            <Car className="w-12 h-12 text-black" />
             <h3 className="mt-4 text-lg font-semibold">
-              Elevate Your Collection with <br /> Premium Quality and Unique Designs
+              {content.featurecard.card1.title[0]} <br /> {content.featurecard.card1.title[1]}
             </h3>
             <p className="mt-2 text-gray-600">
-              Our curated selection features only the finest collectible toys for adults.
+              {content.featurecard.card1.description}
             </p>
             <a href="/ourproducts" className="mt-3 text-sm font-medium text-black hover:underline">
               Shop →
@@ -32,10 +32,10 @@ export default function Section2() {
           <div className="flex flex-col items-center text-center">
             <ShoppingCart className="w-12 h-12 text-black" />
             <h3 className="mt-4 text-lg font-semibold">
-              Seamless Checkout with <br /> WhatsApp Integration for Your Convenience
+              {content.featurecard.card2.title[0]} <br /> {content.featurecard.card2.title[1]}
             </h3>
             <p className="mt-2 text-gray-600">
-              Enjoy a hassle-free shopping experience with direct communication options.
+              {content.featurecard.card2.description}
             </p>
             <a href="/checkout" className="mt-3 text-sm font-medium text-black hover:underline">
               Checkout →
@@ -46,10 +46,10 @@ export default function Section2() {
           <div className="flex flex-col items-center text-center">
             <Mail className="w-12 h-12 text-black" />
             <h3 className="mt-4 text-lg font-semibold">
-              Stay Updated with Our <br /> Exclusive Offers and New Arrivals
+              {content.featurecard.card3.title[0]} <br /> {content.featurecard.card3.title[1]}
             </h3>
             <p className="mt-2 text-gray-600">
-              Subscribe to our newsletter for the latest news and promotions.
+              {content.featurecard.card3.description}
             </p>
             <a href="/subscribe" className="mt-3 text-sm font-medium text-black hover:underline">
               Subscribe →

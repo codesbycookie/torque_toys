@@ -1,31 +1,10 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const testimonials = [
-  {
-    id: 1,
-    text: "Torque Toys has transformed my collection! The quality and detail of each piece are simply unmatched.",
-    name: "Emily Carter",
-    role: "Collector, Enthusiast",
-    img: "https://randomuser.me/api/portraits/women/65.jpg",
-  },
-  {
-    id: 2,
-    text: "The best collectibles I’ve ever purchased! Truly premium and worth every penny.",
-    name: "Daniel Smith",
-    role: "Toy Collector",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
-  },
-  {
-    id: 3,
-    text: "Absolutely love the variety and exclusivity. Every new release is a must-have in my collection!",
-    name: "Sophia Lee",
-    role: "Designer & Collector",
-    img: "https://randomuser.me/api/portraits/women/32.jpg",
-  },
-];
 
-export default function Section5() {
+
+export default function Section5({ content }) {
+  const testimonials = content.testimonials;
   const [current, setCurrent] = useState(0);
 
   const prevTestimonial = () => {

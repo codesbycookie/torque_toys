@@ -8,7 +8,7 @@ export default function Navbar() {
   const { cart } = useCart();
 
   return (
-    <nav className="w-full bg-white shadow-sm">
+    <nav className="w-full bg-white shadow-sm ">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}
@@ -25,7 +25,14 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
           <li><Link to="/" className="hover:text-black">Home</Link></li>
-          <li><Link to="/about-us" className="hover:text-black">About Us</Link></li>
+          <li>
+            <a
+              href="#about-us"
+              className="hover:text-black"
+            >
+              About Us
+            </a>
+            </li>
           <li><Link to="/our-products" className="hover:text-black">Our Products</Link></li>
           <li><Link to="/contact-us" className="hover:text-black">Contact Us</Link></li>
         </ul>
