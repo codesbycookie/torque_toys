@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom"; // import Link
 import { homepage } from "../../../data/productsData";
-
 
 export default function Section4({ content }) {
   const products = content.products;
@@ -33,13 +33,15 @@ export default function Section4({ content }) {
           <div>
             <p className="text-sm text-gray-500">{content.para1}</p>
             <h2 className="text-3xl font-bold text-gray-900">{content.heading}</h2>
-            <p className="mt-1 text-gray-600">
-              {content.description}
-            </p>
+            <p className="mt-1 text-gray-600">{content.description}</p>
           </div>
-          <button className="px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition">
+          {/* View All Button navigates to /our-products */}
+          <Link
+            to="/our-products"
+            className="px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
+          >
             {content.linkBtn}
-          </button>
+          </Link>
         </div>
 
         {/* Horizontal Scroll */}
@@ -53,12 +55,19 @@ export default function Section4({ content }) {
                 key={content.id}
                 className="min-w-[250px] flex-shrink-0 group"
               >
-                <div className=" h-60 rounded-xl mb-4 flex items-center justify-center">
-                  <img className="h-full w-100 object-contain bg-transparent" src={content.img} alt={content.name} />
+                <div className="h-60 rounded-xl mb-4 flex items-center justify-center">
+                  <img
+                    className="h-full w-100 object-contain bg-transparent"
+                    src={content.img}
+                    alt={content.name}
+                  />
                 </div>
                 <h3 className="text-lg font-semibold">{content.name}</h3>
                 <p className="text-sm text-gray-500">{content.type}</p>
-                <p className="mt-1 font-bold">₹{content.price[0]} <span className="text-gray-500 line-through">₹{content.price[1]}</span></p>
+                <p className="mt-1 font-bold">
+                  ₹{content.price[0]}{" "}
+                  <span className="text-gray-500 line-through">₹{content.price[1]}</span>
+                </p>
               </div>
             ))}
           </div>

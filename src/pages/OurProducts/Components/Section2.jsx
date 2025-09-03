@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { products } from "../../../data/productsData";
+import { ourproductpage } from "../../../data/productsData";
 import { useCart } from "../../../context/CartContext";
 
 export default function Section2() {
@@ -9,14 +9,14 @@ export default function Section2() {
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          Our Products
+          {ourproductpage.section2.heading}
         </h2>
 
         <div className="space-y-8">
-          {products.map((product) => (
+          {ourproductpage.section2.products.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col md:flex-row items-center bg-white  rounded-2xl overflow-hidden hover:shadow-lg transition"
+              className="flex flex-col md:flex-row items-center bg-white rounded-2xl overflow-hidden hover:shadow-lg transition"
             >
               {/* Product Image */}
               <div className="w-full md:w-1/3">

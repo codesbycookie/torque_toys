@@ -1,10 +1,15 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-import { products } from "../../../data/productsData";
+import { ourproductpage } from "../../../data/productsData";
+import { useCart } from "../../../context/CartContext"; // import the cart context
 
 export default function ProductDetail() {
   const { id } = useParams();
-  const product = products.find((p) => p.id === parseInt(id));
+  const { addToCart } = useCart(); // get addToCart function from context
+
+  const product = ourproductpage.section2.products.find(
+    (p) => p.id === parseInt(id)
+  );
 
   const [selectedImage, setSelectedImage] = useState(product?.image);
 
@@ -62,7 +67,10 @@ export default function ProductDetail() {
 
           {/* Buttons */}
           <div className="mt-6 flex space-x-4">
-            <button className="px-6 py-2 border border-gray-700 rounded-lg hover:bg-gray-100 transition">
+            <button
+              onClick={() => addToCart(product)} // add product to cart
+              className="px-6 py-2 border border-gray-700 rounded-lg hover:bg-gray-100 transition"
+            >
               Add to Cart
             </button>
             <Link
@@ -77,7 +85,7 @@ export default function ProductDetail() {
 
       {/* Description below */}
       <div className="mt-12 max-w-3xl mx-auto text-center">
-        <p className="text-gray-700 leading-relaxed">{product.longDescription}</p>
+        <p className="text-gray-700 leading-relaxed">{product.description}</p>
       </div>
     </div>
   );

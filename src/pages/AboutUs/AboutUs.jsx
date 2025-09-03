@@ -1,3 +1,14 @@
-export default function AboutUs() {
-  return <h1 className="p-10 text-3xl">About Us Page</h1>;
+import Section3 from "../Home/Components/Section3";
+import Section4 from "../Home/Components/Section4";
+import { homepage } from "../../data/productsData";
+
+export default function Aboutus() {
+  const { section3, section4 } = homepage;
+
+  return (
+    <div className="pt-24">
+      <Section3 content={section3} />
+      <Section4 content={section4} />
+    </div>
+  );
 }

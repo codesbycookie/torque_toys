@@ -191,68 +191,70 @@ export const homepage = {
     ]
   }
 };
-export const products = [
-  {
-    id: 1,
-    name: "Die-cast Defender Remote Control car",
-    image: "/products/car.png",
+
+export const ourproductpage = {
+  section1: {
+    heading: "Explore Your Next Treasure",
+    subheading: '"Not Just Products, but Stories You Can Collect"',
     images: [
-      "/car1-1.png",
-      "/car1-2.png",
-      "/car1-3.png",
-      "/car2-1.png",
-      "/car2-2.png",
-      "/car2-2.png",
+      "/car1-1-removebg-preview.png",
+      "/car2-1-removebg-preview.png",
+      "/car3-1-removebg-preview.png",
+      "/car4-1-removebg-preview.png",
+      "/car5-1-removebg-preview.png",
+      "/car6-1-removebg-preview.png",
+      "/car7-1-removebg-preview.png",
+      "/car8-1-removebg-preview.png",
+      "/car9-1-removebg-preview.png",
+      "/car10-1-removebg-preview.png",
+      "/car11-1-removebg-preview.png",
+      "/car12-1-removebg-preview.png",
+      "/car13-1-removebg-preview.png",
     ],
-    price: "$500",
-    description: `Experience the perfect blend of rugged power and sleek design 
-    with this 1:22 scale RC Defender. Crafted with a full metal body, 
-    this remote-controlled SUV is built to impress and perform.`,
-    longDescription: `This Die-cast Defender RC Car features an advanced remote control system, durable build, and stylish detailing. Perfect for collectors and hobbyists who want performance with aesthetics.`,
   },
-  {
-    id: 2,
-    name: "Classic Bike",
-    image: "/products/bike.png",
-    images: [
-      "/car1-1.png",
-      "/car1-2.png",
-      "/car1-3.png",
-      "/car2-1.png",
-      "/car2-2.png",
+  section2: {
+    heading: "Our Products",
+    products: [
+      {
+        id: 1,
+        image: "/car1-1-removebg-preview.png",
+        name: "Die-cast Defender Remote Control car",
+        description:
+          "Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Defender...",
+        price: "₹1599",
+      },
+      {
+        id: 2,
+        image: "/car2-1-removebg-preview.png",
+        name: "Die-cast Rolls Royce Remote Control Car",
+        description:
+          "Styled after the iconic Rolls Royce with a sturdy full-metal body...",
+        price: "₹1599",
+      },
+      {
+        id: 3,
+        image: "/car3-1-removebg-preview.png",
+        name: "Die-cast Mercedes-Benz G-Wagon",
+        description:
+          "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model...",
+        price: "₹1499",
+      },
+      {
+        id: 4,
+        image: "/car5-1-removebg-preview.png",
+        name: "6WD Remote Control Stunt Drift Car",
+        description:
+          "Unleash next-level fun with the 6-Wheel Drive RC Stunt Drift Car, designed for wild moves...",
+        price: "₹1849",
+      },
+      {
+        id: 5,
+        image: "/car7-1-removebg-preview.png",
+        name: "Quadcopter Flying Toy",
+        description:
+          "Take playtime to the next level with this intelligent flying quadcopter toy...",
+        price: "₹350",
+      },
     ],
-    price: "$95",
-    description: `A vintage classic bike model built with great detailing.`,
-    longDescription: `This Classic Bike model is an ideal gift for collectors and bike enthusiasts. It’s designed with realistic details and high-quality materials.`,
   },
-  {
-    id: 3,
-    name: "Toy Robot",
-    image: "/products/robot.png",
-    images: [
-      "/car1-1.png",
-      "/car1-2.png",
-      "/car1-3.png",
-      "/car2-1.png",
-      "/car2-2.png",
-    ],
-    price: "$60",
-    description: `Futuristic toy robot with motion sensors and lights.`,
-    longDescription: `This Toy Robot comes with motion detection, sound effects, and LED lights. Kids will love its interactive features and futuristic design.`,
-  },
-  {
-    id: 4,
-    name: "Mini Truck",
-    image: "/products/truck.png",
-    images: [
-      "/car1-1.png",
-      "/car1-2.png",
-      "/car1-3.png",
-      "/car2-1.png",
-      "/car2-2.png",
-    ],
-    price: "$75",
-    description: `Miniature truck toy made with premium build quality.`,
-    longDescription: `The Mini Truck is built with a sturdy frame and realistic details. It’s perfect for toy lovers and makes a great collectible item.`,
-  },
-];
+};
