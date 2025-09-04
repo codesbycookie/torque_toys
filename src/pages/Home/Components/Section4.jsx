@@ -38,7 +38,7 @@ export default function Section4({ content }) {
           {/* View All Button navigates to /our-products */}
           <Link
             to="/our-products"
-            className="px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
+            className="min-w-[65px] px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
           >
             {content.linkBtn}
           </Link>

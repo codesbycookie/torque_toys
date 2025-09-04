@@ -1,5 +1,6 @@
 import { MapPin, Users, Gem } from "lucide-react";
 import { homepage } from "../../../data/productsData";
+import { Link } from "react-router-dom";
 
 export default function Section3() {
   return (
@@ -39,12 +40,12 @@ export default function Section3() {
 
           {/* Buttons */}
           <div className="mt-6 flex gap-4">
-            <button className="px-6 py-3 border border-gray-400 rounded-lg hover:bg-gray-100 transition">
+            <Link to="/about-us" className="px-6 py-3 border border-gray-400 rounded-lg hover:bg-gray-100 transition">
               {homepage.section3.cta[0]}
-            </button>
-            <button className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
+            </Link>
+            <Link to="/contact-us" className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
               {homepage.section3.cta[1]} →
-            </button>
+            </Link>
           </div>
         </div>
       </div>

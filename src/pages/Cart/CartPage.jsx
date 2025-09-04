@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useCart } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, clearCart } = useCart();
@@ -13,26 +14,11 @@ export default function CartPage() {
     shippingContact: "",
   });
 
-  // 🔥 Save cart to localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cart));
-  }, [cart]);
-
-  // 🔥 Restore cart from localStorage on page load
-  useEffect(() => {
-    const savedCart = localStorage.getItem("cartItems");
-    if (savedCart) {
-      try {
-        const parsedCart = JSON.parse(savedCart);
-        parsedCart.forEach((item) => {
-          // Rehydrate cart items using updateQuantity
-          updateQuantity(item.id, item.quantity);
-        });
-      } catch (error) {
-        console.error("Failed to restore cart from localStorage", error);
-      }
-    }
-  }, []);
+  // 🔹 Helper: Get price (handles array or string)
+  const getPrice = (price) => {
+    const rawPrice = Array.isArray(price) ? price[0] : price;
+    return parseFloat(rawPrice.toString().replace(/[^0-9.]/g, "")) || 0;
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,15 +29,14 @@ export default function CartPage() {
 
     const cartDetails = cart
       .map((item, idx) => {
-        const itemPrice =
-          parseFloat(item.price.toString().replace(/[^0-9.]/g, "")) || 0;
+        const itemPrice = getPrice(item.price);
         return `${idx + 1}) ${item.name} - ${item.quantity} x ₹${itemPrice} = ₹${
           itemPrice * item.quantity
         }`;
       })
       .join("\n");
 
-    const message = `🛒 New Order\n
+    const message = `🛒 New Order Placed\n
 Name: ${formData.name}
 Phone: ${formData.phone}
 Contact: ${formData.contact}
@@ -62,47 +47,49 @@ Shipping Contact: ${formData.shippingContact}
 🛍️ Products:
 ${cartDetails}`;
 
-    const whatsappUrl = `https://wa.me/918124962203?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/919600142392?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
 
     clearCart();
-    localStorage.removeItem("cartItems"); // 🔥 Clear localStorage when checkout
+    localStorage.removeItem("cartItems");
     setShowForm(false);
   };
 
   const totalAmount = cart.reduce((acc, item) => {
-    const itemPrice =
-      parseFloat(item.price.toString().replace(/[^0-9.]/g, "")) || 0;
+    const itemPrice = getPrice(item.price);
     return acc + itemPrice * item.quantity;
   }, 0);
 
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-6 py-12 min-h-[80vh] ">
       <h1 className="text-4xl font-bold mb-10 text-center text-gray-900">
         🛒 My Cart
       </h1>
 
       {cart.length === 0 ? (
-        <div className="text-center py-16">
-          <p className="text-gray-600 text-lg mb-4">
+        <div className="text-center py-16 ">
+          <p className="text-gray-600 text-lg mb-10">
             Your cart is empty. Start shopping now!
           </p>
-          <a
-            href="/our-products"
+          <Link
+            to="/our-products"
             className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
             Browse Products
-          </a>
+          </Link>
         </div>
       ) : (
         <div className="grid md:grid-cols-3 gap-8">
           {/* Cart Items */}
           <div className="md:col-span-2 space-y-5">
             {cart.map((item) => {
-              const itemPrice =
-                parseFloat(item.price.toString().replace(/[^0-9.]/g, "")) || 0;
+              const itemPrice = getPrice(item.price);
+              const rawPrice = Array.isArray(item.price)
+                ? item.price[0]
+                : item.price;
+
               return (
                 <div
                   key={item.id}
@@ -121,7 +108,7 @@ ${cartDetails}`;
                       <h2 className="font-semibold text-lg text-gray-900">
                         {item.name}
                       </h2>
-                      <p className="text-gray-500 text-sm">₹{item.price}</p>
+                      <p className="text-gray-500 text-sm">₹{rawPrice}</p>
 
                       {/* Quantity Controls */}
                       <div className="flex items-center gap-2 mt-3">

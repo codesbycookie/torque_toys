@@ -55,7 +55,7 @@ export const homepage = {
       "Join our community of passionate collectors today.",
       "Experience elegance in every collectible we offer.",
     ],
-    cta: ["Learn More", "Sign Up"],
+    cta: ["Learn More", "Contact Us"],
   },
   section4: {
     para1:"Collectibles",

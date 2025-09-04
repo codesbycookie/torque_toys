@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
  // adjust path
 import { homepage } from "../../../data/productsData"; // adjust path
 
@@ -24,12 +25,12 @@ export default function Section1({content}) {
             {content.description}
           </p>
           <div className="mt-6 flex gap-4">
-            <button className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
+            <Link className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition" to="our-products">
               {content.cta[0]}
-            </button>
-            <button className="px-6 py-3 border border-gray-400 rounded-lg hover:bg-gray-100 transition">
+            </Link>
+            <Link className="px-6 py-3 border border-gray-400 rounded-lg hover:bg-gray-100 transition" to="about-us">
               {content.cta[1]}
-            </button>
+            </Link>
           </div>
         </div>
 

@@ -1,6 +1,8 @@
 import { Monitor, ShoppingCart, Mail,Car } from "lucide-react"; 
 import { homepage } from "../../../data/productsData";
 
+import { Link } from "react-router-dom";
+
 export default function Section2({ content }) {
   return (
     <section className="bg-white py-20">
@@ -23,9 +25,9 @@ export default function Section2({ content }) {
             <p className="mt-2 text-gray-600">
               {content.featurecard.card1.description}
             </p>
-            <a href="/ourproducts" className="mt-3 text-sm font-medium text-black hover:underline">
+            <Link to="/our-products" className="mt-3 text-sm font-medium text-black hover:underline">
               Shop →
-            </a>
+            </Link>
           </div>
 
           {/* Feature 2 */}
@@ -37,9 +39,9 @@ export default function Section2({ content }) {
             <p className="mt-2 text-gray-600">
               {content.featurecard.card2.description}
             </p>
-            <a href="/checkout" className="mt-3 text-sm font-medium text-black hover:underline">
+            <Link to="/cart" className="mt-3 text-sm font-medium text-black hover:underline">
               Checkout →
-            </a>
+            </Link>
           </div>
 
           {/* Feature 3 */}
