@@ -44,14 +44,14 @@ export default function Section1({ content }) {
           <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
 
           {/* Left Column (Scroll Down) */}
-          <div className="overflow-hidden h-[450px] rounded-xl">
+          <div className="overflow-hidden h-[500px] rounded-xl">
             <div className="flex flex-col animate-scroll-down">
               {doubledImages.map((img, idx) => (
                 <img
                   key={`down-${idx}`}
                   src={img}
                   alt={`scroll-down-${idx}`}
-                  className="rounded-xl h-36 md:h-44 lg:h-48 w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out shadow-sm hover:shadow-lg"
+                  className="rounded-xl h-full w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out shadow-sm hover:shadow-lg"
                 />
               ))}
             </div>
@@ -65,7 +65,7 @@ export default function Section1({ content }) {
                   key={`up-${idx}`}
                   src={img}
                   alt={`scroll-up-${idx}`}
-                  className="rounded-xl h-36 md:h-44 lg:h-48 w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out shadow-sm hover:shadow-lg"
+                  className="rounded-xl h-full w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out shadow-sm hover:shadow-lg"
                 />
               ))}
             </div>

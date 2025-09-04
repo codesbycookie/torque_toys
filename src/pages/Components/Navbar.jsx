@@ -21,10 +21,10 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-10 text-gray-700 font-medium">
-          <li><Link to="/" className="hover:text-black transition-colors">Home</Link></li>
-          <li><Link to="/about-us" className="hover:text-black transition-colors">About Us</Link></li>
-          <li><Link to="/our-products" className="hover:text-black transition-colors">Our Products</Link></li>
-          <li><Link to="/contact-us" className="hover:text-black transition-colors">Contact Us</Link></li>
+          <li><Link to="/" className="hover:text-black transition-colors font-bold">Home</Link></li>
+          <li><Link to="/about-us" className="hover:text-black transition-colors font-bold">About Us</Link></li>
+          <li><Link to="/our-products" className="hover:text-black transition-colors font-bold">Our Products</Link></li>
+          <li><Link to="/contact-us" className="hover:text-black transition-colors font-bold">Contact Us</Link></li>
         </ul>
 
         {/* Cart Button (Desktop) */}

@@ -38,9 +38,9 @@ export const homepage = {
           "Enjoy a hassle-free shopping experience with direct communication options.",
       },
       card3: {
-        title: ["Stay Updated with Our Exclusive Offers", "and New Arrivals"],
+        title: ["If Something Broke , We Will Fix It", "No Questions Asked"],
         description:
-          "Subscribe to our newsletter for the latest news and promotions.",
+          "Your satisfaction is our priority. We offer Fix for a worry-free experience.",
       },
     },
   },
@@ -65,7 +65,7 @@ export const homepage = {
     products: [
       {
         id: 1,
-        img: "/car1-1-removebg-preview.png",
+        img: "/car1-3-removebg-preview.png",
         name: "Die-cast Defender Remote Control car",
         description:"Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Defender. Crafted with a full metal body, this remote-controlled SUV is built to impress and perform. Whether you're a collector or an RC enthusiast.Styled after the iconic Defender, with a sturdy full-metal body that looks and feels premium.Enjoy seamless control with anti-interference technology, perfect for multi-car play without signal clash.Realistic open-and-close doors add to the authentic feel.Front lights light up the action, even in low light.Built-in smoke feature for added drama and a realistic engine vibe.Responsive controls ensure smooth turns, forward/reverse motion, and a powerful drive.Perfect for gifting, display, or RC action, this diecast Defender brings excitement to kids and adults alike!",
         type: "Standard",
@@ -217,7 +217,7 @@ export const ourproductpage = {
     products: [
         {
           id: 1,
-          image: "/car1-1-removebg-preview.png",
+          image: "/car1-3-removebg-preview.png",
           name: "Die-cast Defender Remote Control car",
           description:
             "Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Defender...",

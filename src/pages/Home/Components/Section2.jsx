@@ -1,4 +1,4 @@
-import { Monitor, ShoppingCart, Mail,Car } from "lucide-react"; 
+import { Monitor, ShoppingCart, Mail,Car,Hammer } from "lucide-react"; 
 import { homepage } from "../../../data/productsData";
 
 import { Link } from "react-router-dom";
@@ -46,7 +46,7 @@ export default function Section2({ content }) {
 
           {/* Feature 3 */}
           <div className="flex flex-col items-center text-center">
-            <Mail className="w-12 h-12 text-black" />
+            <Hammer className="w-12 h-12 text-black" />
             <h3 className="mt-4 text-lg font-semibold">
               {content.featurecard.card3.title[0]} <br /> {content.featurecard.card3.title[1]}
             </h3>
@@ -54,7 +54,7 @@ export default function Section2({ content }) {
               {content.featurecard.card3.description}
             </p>
             <a href="/subscribe" className="mt-3 text-sm font-medium text-black hover:underline">
-              Subscribe →
+              Guarantee →
             </a>
           </div>
 
