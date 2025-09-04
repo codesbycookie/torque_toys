@@ -221,7 +221,7 @@ export const ourproductpage = {
           name: "Die-cast Defender Remote Control car",
           description:
             "Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Defender...",
-          FullDescription:"Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Rolls Royce. Crafted with a full metal body, this remote-controlled SUV is built to impress and perform. Whether you're a collector or an RC enthusiast.Styled after the iconic Rolls Royce with a sturdy full-metal body that looks and feels premium.Enjoy seamless control with anti-interference technology, perfect for multi-car play without signal clash.Realistic open-and-close doors add to the authentic feel.Front lights light up the action, even in low light.Built-in smoke feature for added drama and a realistic engine vibe.Responsive controls ensure smooth turns, forward/reverse motion, and a powerful drive.Perfect for gifting, display, or RC action, this diecast Rolls Royce brings excitement to kids and adults alike!",
+          Fulldescription:"Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Rolls Royce. Crafted with a full metal body, this remote-controlled SUV is built to impress and perform. Whether you're a collector or an RC enthusiast.Styled after the iconic Rolls Royce with a sturdy full-metal body that looks and feels premium.Enjoy seamless control with anti-interference technology, perfect for multi-car play without signal clash.Realistic open-and-close doors add to the authentic feel.Front lights light up the action, even in low light.Built-in smoke feature for added drama and a realistic engine vibe.Responsive controls ensure smooth turns, forward/reverse motion, and a powerful drive.Perfect for gifting, display, or RC action, this diecast Rolls Royce brings excitement to kids and adults alike!",
 
           price: ["1599","2899"],
         },
@@ -231,6 +231,7 @@ export const ourproductpage = {
           name: "Die-cast Rolls Royce Remote Control Car",
           description:
             "Styled after the iconic Rolls Royce with a sturdy full-metal body...",
+            Fulldescription:"Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Defender. Crafted with a full metal body, this remote-controlled SUV is built to impress and perform. Whether you're a collector or an RC enthusiast.Styled after the iconic Defender, with a sturdy full-metal body that looks and feels premium.Enjoy seamless control with anti-interference technology, perfect for multi-car play without signal clash.Realistic open-and-close doors add to the authentic feel.Front lights light up the action, even in low light.Built-in smoke feature for added drama and a realistic engine vibe.Responsive controls ensure smooth turns, forward/reverse motion, and a powerful drive.Perfect for gifting, display, or RC action, this diecast Defender brings excitement to kids and adults alike!",
           price:["1599","2899"],
         },
         {
@@ -239,6 +240,7 @@ export const ourproductpage = {
           name: "Die-cast Mercedes-Benz G-Wagon",
           description:
             "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model...",
+            Fulldescription:"Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model. Designed for collectors and enthusiasts alike, this model captures the bold, boxy design and fine detailing of the real G-Class SUV.Crafted with a durable metal body and plastic parts for a realistic and sturdy finish.Front doors open smoothly, revealing a detailed interior for an authentic look and feel.Simply pull the car back, release, and watch it zoom forward—fun for kids and adults.From the signature grille to the realistic dashboard, every element is made with attention to detail.Ideal for collectors, display shelves, or imaginative play.",
           price: ["1499","1999"],
         },
         {
@@ -247,6 +249,7 @@ export const ourproductpage = {
           name: "Die-cast Mercedes-Benz G-Wagon",
           description:
             "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model...",
+          Fulldescription:"Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model. Designed for collectors and enthusiasts alike, this model captures the bold, boxy design and fine detailing of the real G-Class SUV.Crafted with a durable metal body and plastic parts for a realistic and sturdy finish.Front doors open smoothly, revealing a detailed interior for an authentic look and feel.Simply pull the car back, release, and watch it zoom forward—fun for kids and adults.From the signature grille to the realistic dashboard, every element is made with attention to detail.Ideal for collectors, display shelves, or imaginative play.",
           price: ["1499","1999"],
         },
         {
@@ -255,6 +258,7 @@ export const ourproductpage = {
           name: "6WD Remote Control Stunt Drift Car",
           description:
             "Unleash next-level fun with the 6-Wheel Drive RC Stunt Drift Car, designed for wild moves, all-terrain action, and non-stop excitement...",
+            Fulldescription:"Unleash next-level fun with the 6-Wheel Drive RC Stunt Drift Car, designed for wild moves, all-terrain action, and non-stop excitement! Packed with advanced features and dual control modes, this car is perfect for kids, teens, and RC enthusiasts alike.Conquer any terrain with powerful 6WD and smooth drifting capabilities for ultimate stunt performance.Operate with a traditional remote controller or wear the smart gesture-sensing watch control for hands-free action.Activate the built-in spray system for a cool exhaust effect during high-speed drifts.Perform epic 360-degree spins, flips, and multi-directional stunts with ease.Vibrant LED lights add a futuristic look, perfect for night driving and show-off moments.Long-lasting battery life ensures more playtime and less waiting.",
           price: ["1849","2999"],
         },
         {
