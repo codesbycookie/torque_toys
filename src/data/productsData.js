@@ -215,46 +215,112 @@ export const ourproductpage = {
   section2: {
     heading: "Our Products",
     products: [
-      {
-        id: 1,
-        image: "/car1-1-removebg-preview.png",
-        name: "Die-cast Defender Remote Control car",
-        description:
-          "Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Defender...",
-        price: "₹1599",
-      },
-      {
-        id: 2,
-        image: "/car2-1-removebg-preview.png",
-        name: "Die-cast Rolls Royce Remote Control Car",
-        description:
-          "Styled after the iconic Rolls Royce with a sturdy full-metal body...",
-        price: "₹1599",
-      },
-      {
-        id: 3,
-        image: "/car3-1-removebg-preview.png",
-        name: "Die-cast Mercedes-Benz G-Wagon",
-        description:
-          "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model...",
-        price: "₹1499",
-      },
-      {
-        id: 4,
-        image: "/car5-1-removebg-preview.png",
-        name: "6WD Remote Control Stunt Drift Car",
-        description:
-          "Unleash next-level fun with the 6-Wheel Drive RC Stunt Drift Car, designed for wild moves...",
-        price: "₹1849",
-      },
-      {
-        id: 5,
-        image: "/car7-1-removebg-preview.png",
-        name: "Quadcopter Flying Toy",
-        description:
-          "Take playtime to the next level with this intelligent flying quadcopter toy...",
-        price: "₹350",
-      },
+        {
+          id: 1,
+          image: "/car1-1-removebg-preview.png",
+          name: "Die-cast Defender Remote Control car",
+          description:
+            "Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Defender...",
+          FullDescription:"Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC Rolls Royce. Crafted with a full metal body, this remote-controlled SUV is built to impress and perform. Whether you're a collector or an RC enthusiast.Styled after the iconic Rolls Royce with a sturdy full-metal body that looks and feels premium.Enjoy seamless control with anti-interference technology, perfect for multi-car play without signal clash.Realistic open-and-close doors add to the authentic feel.Front lights light up the action, even in low light.Built-in smoke feature for added drama and a realistic engine vibe.Responsive controls ensure smooth turns, forward/reverse motion, and a powerful drive.Perfect for gifting, display, or RC action, this diecast Rolls Royce brings excitement to kids and adults alike!",
+
+          price: ["1599","2899"],
+        },
+        {
+          id: 2,
+          image: "/car2-1-removebg-preview.png",
+          name: "Die-cast Rolls Royce Remote Control Car",
+          description:
+            "Styled after the iconic Rolls Royce with a sturdy full-metal body...",
+          price:["1599","2899"],
+        },
+        {
+          id: 3,
+          image: "/car3-1-removebg-preview.png",
+          name: "Die-cast Mercedes-Benz G-Wagon",
+          description:
+            "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model...",
+          price: ["1499","1999"],
+        },
+        {
+          id: 4,
+          image: "/car4-1-removebg-preview.png",
+          name: "Die-cast Mercedes-Benz G-Wagon",
+          description:
+            "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model...",
+          price: ["1499","1999"],
+        },
+        {
+          id: 5,
+          image: "/car5-1-removebg-preview.png",
+          name: "6WD Remote Control Stunt Drift Car",
+          description:
+            "Unleash next-level fun with the 6-Wheel Drive RC Stunt Drift Car, designed for wild moves, all-terrain action, and non-stop excitement...",
+          price: ["1849","2999"],
+        },
+        {
+      id: 6,
+      image: "/car6-1-removebg-preview.png",
+      name: "R/C Rock Crawler 1:16 Off-Road",
+      description: "Take your off-road adventures to the next level with this powerful 1:16 scale RC Rock Crawler...",
+      Fulldescription: "Take your off-road adventures to the next level with this powerful 1:16 scale RC Rock Crawler with Type C charging. Designed for thrill-seekers and hobbyists alike, this rugged vehicle combines style, performance, and exciting features for an unforgettable driving experience. Compact yet detailed, perfect for indoor play and outdoor challenges. Provides a balance of speed and control while handling rough terrain. Large treaded tires and strong suspension system ensure smooth rides across sand, gravel, grass, and rocky paths. Adds a fun, realistic touch, simulating exhaust or mist while driving. Shock-absorbing materials withstand bumps, jumps, and tough trails. Responsive remote with forward, backward, left, and right steering for smooth handling.",
+      price: ["750", "1499"]
+    },
+    {
+      id: 7,
+      image: "/car7-1-removebg-preview.png",
+      name: "Quadcopter Flying Toy",
+      description: "Take playtime to the next level with this intelligent flying quadcopter toy...",
+      Fulldescription: "Take playtime to the next level with this intelligent flying quadcopter toy! Designed with advanced motion and sensor technology, this mini drone can detect obstacles and avoid collisions for a smooth and safe flight experience. Fly it using the included remote or simply guide it with your hand movements for interactive fun. Built-in rechargeable battery ensures hours of entertainment with easy USB charging. Made with child-friendly, crash-resistant materials for worry-free play. Enjoy flips, spins, and stable hovering with precise controls. Safe, easy to use, and packed with fun features that encourage active play. Whether indoors or outdoors, this sensor quadcopter drone toy delivers exciting aerial adventures for kids and beginners alike!",
+      price: ["350", "600"]
+    },
+    {
+      id: 8,
+      image: "/car8-1-removebg-preview.png",
+      name: "RC Drift Car – 1:24 Scale High-Speed 4WD",
+      description: "Experience the thrill of racing with this high-speed RC drift car...",
+      Fulldescription: "Experience the thrill of racing with this high-speed RC drift car designed for ultimate fun and control. Built with a 1:24 scale design and 2.4GHz remote control system, it delivers smooth handling, responsive steering, and interference-free racing—perfect for indoor and outdoor drifting. Enjoy exciting drift action and fast racing. Enhanced traction and stability for controlled drifting. Long-lasting playtime with easy USB charging. Quickly swap tyres for extended fun. Headlights and effects for a cool, realistic racing experience. Allows multiple cars to race together without signal interference. Perfect size for portability and racing anywhere. Take your RC racing to the next level with this drift-ready, rechargeable RC car—a perfect gift for kids, hobbyists, and racing enthusiasts alike.",
+      price: ["1399", "2199"]
+    },
+    {
+      id: 9,
+      image: "/car9-1-removebg-preview.png",
+      name: "Hornet R/C Truck with Spray Function",
+      description: "Get ready to dominate the streets with the RC Ghost Truck...",
+      Fulldescription: "Get ready to dominate the streets with the RC Ghost Truck – a powerful and eye-catching remote control monster truck designed to thrill! Featuring a realistic spray function that mimics smoke and vibrant color-changing LED lights, this beast lights up the road and brings the action to life, day or night. Cool Mist Spray Effect for realistic engine smoke. Multi-color LED Lights for an epic night-time show. 2.4GHz Remote Control for smooth, interference-free play. Durable Build for all-terrain fun. Perfect for kids and collectors who crave action, style, and a touch of ghostly flair.",
+      price: ["1599", "2099"]
+    },
+    {
+      id: 10,
+      image: "/car10-1-removebg-preview.png",
+      name: "Stunt Twisting RC Car – Dual Control Beast",
+      description: "Unleash next-level fun with the Stunt Twisting RC Car...",
+      Fulldescription: "Unleash next-level fun with the Stunt Twisting RC Car, a powerhouse of performance and style! Designed with rugged off-road tires, it delivers wild 360° spins, jaw-dropping stunts, and vibrant lighting effects. Control it your way – with the remote or the futuristic watch gesture control for hands-free action. Equipped with a music system, cool mist spray, and an exciting demo mode, this car is built to entertain, indoors or outdoors. 360° Twisting Stunts & Drifts. Watch Gesture Control + Remote Control. Realistic Spray Function. Built-in Music System. Colorful LED Lighting Effects. Off-Road Tires for all terrains. Auto Demo Mode to showcase its features. Perfect for kids and RC lovers who want action, tech, and fun – all in one!",
+      price: ["1599", "2199"]
+    },
+    {
+      id: 11,
+      image: "/car11-1-removebg-preview.png",
+      name: "RC Racing Car – Speed & Fun",
+      description: "Race into action with this sleek and stylish RC Racing Car...",
+      Fulldescription: "Race into action with this sleek and stylish RC Racing Car, perfect for kids and beginners! Powered by a rechargeable battery and comes with a charger, it offers endless fun without breaking the bank. High-Speed Racing Performance. Rechargeable Battery with Charger Included. Easy-to-Use Remote Control. Budget-Friendly Price. Perfect for Indoor & Outdoor Play. Great value, great performance – the ultimate budget RC car for non-stop racing excitement!",
+      price: ["649", "1199"]
+    },
+    {
+      id: 12,
+      image: "/car12-1-removebg-preview.png",
+      name: "RC High Speed Drift Car - 1:16",
+      description: "Bring home the thrill of a supercar with this premium 1:32 scale Die-Cast Lamborghini...",
+      Fulldescription: "Bring home the thrill of a supercar with this premium 1:32 scale Die-Cast Lamborghini! Crafted with attention to detail, it features openable doors, realistic engine sound, working lights, and a pull-back action for added fun. 1:32 Scale Die-Cast Model. Openable Doors for realistic play. Sound & Light Effects. Pull-Back Function – just pull and release. High-Quality Metal Body. A perfect collectible and play car for kids and supercar lovers.",
+      price: ["2200", "2999"]
+    },
+    {
+      id: 13,
+      image: "/car13-1-removebg-preview.png",
+      name: "Die-Cast Lamborghini 1:32 Scale",
+      description: "Bring home the thrill of a supercar with this premium 1:32 scale Die-Cast Lamborghini...",
+      Fulldescription: "Bring home the thrill of a supercar with this premium 1:32 scale Die-Cast Lamborghini! Crafted with attention to detail, it features openable doors, realistic engine sound, working lights, and a pull-back action for added fun. 1:32 Scale Die-Cast Model. Openable Doors for realistic play. Sound & Light Effects. Pull-Back Function – just pull and release. High-Quality Metal Body. A perfect collectible and play car for kids and supercar lovers.",
+      price: ["650", "999"]
+    }
     ],
   },
 };

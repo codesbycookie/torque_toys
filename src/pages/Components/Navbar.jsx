@@ -8,7 +8,7 @@ export default function Navbar() {
   const { cart } = useCart();
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
+    <nav className=" left-0 w-full z-50 bg-white shadow-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}

@@ -61,9 +61,9 @@ export default function ProductDetail() {
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl font-bold text-gray-900">{product.name}</h2>
           <p className="text-gray-700 mt-4">{product.description}</p>
-          <p className="text-2xl font-semibold text-gray-900 mt-6">
-            {product.price}
-          </p>
+          <p className="text-3xl font-semibold text-gray-900 mt-6">
+            ₹{product.price[0]}  <span className="text-gray-500 line-through"> ₹{product.price[1]}</span>
+        </p>
 
           {/* Buttons */}
           <div className="mt-6 flex space-x-4">
