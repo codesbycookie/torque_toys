@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCart } from "../../context/CartContext";
 
 export default function CartPage() {
@@ -12,6 +12,27 @@ export default function CartPage() {
     shippingAddress: "",
     shippingContact: "",
   });
+
+  // 🔥 Save cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cart));
+  }, [cart]);
+
+  // 🔥 Restore cart from localStorage on page load
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cartItems");
+    if (savedCart) {
+      try {
+        const parsedCart = JSON.parse(savedCart);
+        parsedCart.forEach((item) => {
+          // Rehydrate cart items using updateQuantity
+          updateQuantity(item.id, item.quantity);
+        });
+      } catch (error) {
+        console.error("Failed to restore cart from localStorage", error);
+      }
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -47,6 +68,7 @@ ${cartDetails}`;
     window.open(whatsappUrl, "_blank");
 
     clearCart();
+    localStorage.removeItem("cartItems"); // 🔥 Clear localStorage when checkout
     setShowForm(false);
   };
 
@@ -105,7 +127,10 @@ ${cartDetails}`;
                       <div className="flex items-center gap-2 mt-3">
                         <button
                           onClick={() =>
-                            updateQuantity(item.id, Math.max(item.quantity - 1, 1))
+                            updateQuantity(
+                              item.id,
+                              Math.max(item.quantity - 1, 1)
+                            )
                           }
                           className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-lg transition"
                         >
