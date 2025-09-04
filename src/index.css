@@ -46,7 +46,7 @@ html {
 
 @keyframes scrollDown {
   0% {
-    transform: translateY(0);
+    transform: translateY(0%);
   }
   100% {
     transform: translateY(-50%);
@@ -58,7 +58,7 @@ html {
     transform: translateY(-50%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0%);
   }
 }
 
@@ -69,3 +69,4 @@ html {
 .animate-scroll-up {
   animation: scrollUp 20s linear infinite;
 }
+

@@ -1,62 +1,71 @@
 import React from "react";
 import { Link } from "react-router-dom";
- // adjust path
-import { homepage } from "../../../data/productsData"; // adjust path
 
-export default function Section1({content}) {
+export default function Section1({ content }) {
   const images = content.images;
-  
-
-  // Duplicate images to create a seamless infinite scroll
-  const doubledImages = [...images, ...images];
+  const doubledImages = [...images, ...images]; // for seamless scroll
 
   return (
-    <section className="bg-white py-16">
-      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-        
+    <section className="bg-white py-20">
+      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div>
-          <h1 className=" rajdhani-bold text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
+          <h1 className="rajdhani-bold text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
             {content.title[0]} <br />
-           <span className="text-red-600 rajdhani-semibold">{content.title[1]} </span><br /> 
+            <span className="text-red-500 bg-red-100 px-2 rounded-md">
+              {content.title[1]}
+            </span>
+            <br />
             {content.title[2]}
           </h1>
-          <p className="mt-4 text-gray-600 max-w-md">
+          <p className="mt-6 text-gray-600 max-w-md text-lg leading-relaxed">
             {content.description}
           </p>
-          <div className="mt-6 flex gap-4">
-            <Link className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition" to="our-products">
+          <div className="mt-8 flex gap-4">
+            <Link
+              to="/our-products"
+              className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition shadow-md hover:shadow-lg"
+            >
               {content.cta[0]}
             </Link>
-            <Link className="px-6 py-3 border border-gray-400 rounded-lg hover:bg-gray-100 transition" to="about-us">
+            <Link
+              to="/about-us"
+              className="px-6 py-3 border border-gray-400 text-gray-800 rounded-lg hover:bg-gray-100 transition"
+            >
               {content.cta[1]}
             </Link>
           </div>
         </div>
 
-        {/* Right Side Infinite Scroll Images */}
-        <div className="grid grid-cols-2 gap-4">
-          {/* Left Column (Top to Bottom) */}
-          <div className="overflow-hidden h-[400px]">
+        {/* Right Infinite Scroll Images */}
+        <div className="grid grid-cols-2 gap-4 relative">
+          {/* Gradient Overlays for Fade Effect */}
+          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
+
+          {/* Left Column (Scroll Down) */}
+          <div className="overflow-hidden h-[450px] rounded-xl">
             <div className="flex flex-col animate-scroll-down">
               {doubledImages.map((img, idx) => (
                 <img
                   key={`down-${idx}`}
                   src={img}
-                  
-                  className=" rounded-xl h-32 md:h-40 lg:h-full w-full object-cover mb-4"
+                  alt={`scroll-down-${idx}`}
+                  className="rounded-xl h-36 md:h-44 lg:h-48 w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out shadow-sm hover:shadow-lg"
                 />
               ))}
             </div>
           </div>
-          {/* Right Column (Bottom to Top) */}
-          <div className="overflow-hidden h-[400px]">
+
+          {/* Right Column (Scroll Up) */}
+          <div className="overflow-hidden h-[450px] rounded-xl">
             <div className="flex flex-col animate-scroll-up">
               {doubledImages.map((img, idx) => (
                 <img
                   key={`up-${idx}`}
                   src={img}
-                  className=" rounded-xl h-32 md:h-40 lg:h-full w-full object-cover mb-4"
+                  alt={`scroll-up-${idx}`}
+                  className="rounded-xl h-36 md:h-44 lg:h-48 w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out shadow-sm hover:shadow-lg"
                 />
               ))}
             </div>
