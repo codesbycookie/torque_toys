@@ -9,11 +9,14 @@ import Errorpage from "../pages/404ErrorPage/Errorpage";
 import ProductDetail from "../pages/OurProducts/Components/ProductDetail";
 import CartPage from "../pages/Cart/CartPage"
 
+
 export default function App() {
   return (
     <>
+      
       <Navbar />
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/our-products" element={<Products />} />

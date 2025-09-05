@@ -38,34 +38,38 @@ export default function Section1({ content }) {
         </div>
 
         {/* Right Infinite Scroll Images */}
-        <div className="grid grid-cols-2 gap-4 relative">
-          {/* Gradient Overlays for Fade Effect */}
-          <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
-
+        <div className="grid grid-cols-2 gap-[50px]">
           {/* Left Column (Scroll Down) */}
-          <div className="overflow-hidden h-[500px] rounded-xl">
+          <div className="relative overflow-hidden h-[500px] rounded-xl">
+            {/* Gradient Overlays */}
+            <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
+
             <div className="flex flex-col animate-scroll-down">
               {doubledImages.map((img, idx) => (
                 <img
                   key={`down-${idx}`}
                   src={img}
                   alt={`scroll-down-${idx}`}
-                  className="rounded-xl h-full w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out shadow-sm hover:shadow-lg"
+                  className="rounded-xl h-full w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out"
                 />
               ))}
             </div>
           </div>
 
           {/* Right Column (Scroll Up) */}
-          <div className="overflow-hidden h-[450px] rounded-xl">
+          <div className="relative overflow-hidden h-[450px] rounded-xl">
+            {/* Gradient Overlays */}
+            <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
+
             <div className="flex flex-col animate-scroll-up">
               {doubledImages.map((img, idx) => (
                 <img
                   key={`up-${idx}`}
                   src={img}
                   alt={`scroll-up-${idx}`}
-                  className="rounded-xl h-full w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out shadow-sm hover:shadow-lg"
+                  className="rounded-xl h-full w-full object-cover mb-4 transform hover:scale-105 transition duration-500 ease-in-out"
                 />
               ))}
             </div>

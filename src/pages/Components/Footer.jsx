@@ -25,9 +25,8 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex gap-4">
             <a href="#"><Facebook className="w-5 h-5 hover:text-white" /></a>
-            <a href="#"><Instagram className="w-5 h-5 hover:text-white" /></a>
-            <a href="#"><Twitter className="w-5 h-5 hover:text-white" /></a>
-            <a href="#"><Mail className="w-5 h-5 hover:text-white" /></a>
+            <a href="https://www.instagram.com/torquetoyzz"><Instagram className="w-5 h-5 hover:text-white" /></a>
+            <a href="mailto:torquetoyzz@gmail.com"><Mail className="w-5 h-5 hover:text-white" /></a>
             <a href="#"><Youtube className="w-5 h-5 hover:text-white" /></a>
           </div>
         </div>
@@ -36,12 +35,12 @@ export default function Footer() {
         <div className="border-t border-gray-700 my-6"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>© 2025 Cookie Inc. All rights reserved.</p>
-          <a href="https://cookieinc.in" className="text-white font-bold mt-2">A Product by Cookie Inc. 🤍</a>
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-white ">
+          <p className="poppins-regular">© 2025 Torque Toyzz. All rights reserved.</p>
+          <a href="https://cookieinc.in" className="text-white font-bold mt-2 poppins-regular text-[12px]">A Product by Cookie Inc <span className="text-[#c18b43] font-black">.</span></a>
           <div className="flex gap-4 mt-2 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
+            <a href="#" className="hover:text-white poppins-regular">Privacy Policy</a>
+            <a href="#" className="hover:text-white poppins-regular">Terms of Service</a>
           </div>
         </div>
       </div>

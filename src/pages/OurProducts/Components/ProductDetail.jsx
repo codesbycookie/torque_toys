@@ -66,7 +66,7 @@ export default function ProductDetail() {
         {/* Left Side - Thumbnails + Main Image */}
         <div className="flex w-full md:w-1/2 gap-6">
           {/* Thumbnails */}
-          <div className="flex md:flex-col gap-4">
+          <div className="hidden md:flex md:flex-col gap-4">
             {[product.image, ...(product.images || [])].map((img, index) => (
               <img
                 key={index}
