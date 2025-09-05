@@ -37,7 +37,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center text-xs text-white ">
           <p className="poppins-regular">© 2025 Torque Toyzz. All rights reserved.</p>
-          <a href="https://cookieinc.in" className="text-white font-bold mt-2 poppins-regular text-[12px]">A Product by Cookie Inc <span className="text-[#c18b43] font-black">.</span></a>
+          <a href="https://cookieinc.in" className="text-white font-bold mt-2 poppins-regular lg:text-[12px]">A Product by Cookie Inc <span className="text-[#c18b43] font-black">.</span></a>
           <div className="flex gap-4 mt-2 md:mt-0">
             <a href="#" className="hover:text-white poppins-regular">Privacy Policy</a>
             <a href="#" className="hover:text-white poppins-regular">Terms of Service</a>

@@ -5,10 +5,9 @@ export default function ContactUs() {
     <section className="bg-white">
       {/* Contact Section */}
       <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto px-6 py-16">
-        
         {/* Left Side - Image in Stylish Card */}
         <div className="flex justify-center items-center">
-          <div className="w-full max-w-md bg-white ">
+          <div className="w-full max-w-md bg-white">
             <img
               src="/logo.png" // Replace with your image
               alt="Contact Us"
@@ -90,16 +89,19 @@ export default function ContactUs() {
       </div>
 
       {/* Google Map Section */}
-      <div className="w-full h-96">
-        <iframe
+      <div className="container mx-auto px-6 pb-16">
+        <div className="w-full h-96 rounded-xl overflow-hidden shadow-lg">
+          <iframe
           title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345085726!2d144.95373531531573!3d-37.81627917975139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43fdfb1bff%3A0xf5777d6e91b5b!2sVictoria!5e0!3m2!1sen!2sau!4v1638171901874!5m2!1sen!2sau"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3885.681456731774!2d80.225281!3d13.119354999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA3JzA5LjciTiA4MMKwMTMnMzEuMCJF!5e0!3m2!1sen!2sin!4v1757090447568!5m2!1sen!2sin"
           width="100%"
           height="100%"
           allowFullScreen=""
           loading="lazy"
-          className="border-0 "
+          className="border-0"
         ></iframe>
+
+        </div>
       </div>
     </section>
   );
