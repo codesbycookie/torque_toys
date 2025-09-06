@@ -19,7 +19,6 @@ export default function App() {
       
       <Navbar />
       <Routes>
-        
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/our-products" element={<Products />} />

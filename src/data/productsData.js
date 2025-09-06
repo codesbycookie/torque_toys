@@ -326,8 +326,88 @@ export const ourproductpage = {
       name: "RC JCB with Metal Body",
       description: "Bring the construction site to life with this powerful RC JCB! Built with a sturdy metal body and packed with features like light effects, music, spray function, and realistic movement, it’s the ultimate machine for little builders and RC enthusiasts...",
       Fulldescription: "Bring the construction site to life with this powerful RC JCB! Built with a sturdy metal body and packed with features like light effects, music, spray function, and realistic movement, it’s the ultimate machine for little builders and RC enthusiasts.Equipped with 12 channels, 2.4GHz frequency, and a demo mode, it delivers smooth, interference-free control and lifelike operation – just like a real JCB!.Realistic Design – Looks & Moves Like a Real JCB.Strong Metal Body for Durability.Spray Function for Cool Smoke Effect.Built-in Music & Sound Effects.LED Light Effects for Night Play.12 Channel Controls for Full-Function Play.2.4GHz Remote – No Signal InterferencemDemo Mode + On/Off Switch for Easy Use.Perfect for indoor and outdoor fun – it’s more than a toy, it’s a mini construction experience!",
-      price: ["650", "999"]
-    }
+      price: ["1899", "2499"]
+    },
+    {
+      id: 17,
+      image: "/car17-1-removebg-preview.png",
+      name: "Off-road Rock Crawler 4WD | 1:8 Scale",
+      description: "Get ready for extreme adventure with this powerful 1:8 scale 4WD rock crawler...",
+      Fulldescription: "Get ready for extreme adventure with this powerful 1:8 scale 4WD rock crawler – built for rugged performance on beaches, roads, rocky trails, and hill climbs. With a strong suspension system, heavy-duty tires, and high-torque motors, this beast delivers unbeatable grip and stability on any surface. Whether you're tackling sand dunes or climbing steep hills, it handles it all like a pro.4-Wheel Drive System for maximum traction.Rugged Build designed for off-road domination.Large 1:8 Scale for real off-road presence.Beach, Hill & Road Ready – performs on all terrains.Shock-Absorbing Suspension for smooth rides on rough paths",
+      price: ["4499", "7999"]
+    },
+    {
+      id: 18,
+      image: "/car18-1-removebg-preview.png",
+      name: "Die-cast G-wagon Remote Control car",
+      description: "Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC G-Wagon...",
+      Fulldescription: "Experience the perfect blend of rugged power and sleek design with this 1:22 scale RC G-Wagon. Crafted with a full metal body, this remote-controlled SUV is built to impress and perform. Whether you're a collector or an RC enthusiast.Styled after the iconic G-Wagon, with a sturdy full-metal body that looks and feels premium.Enjoy seamless control with anti-interference technology, perfect for multi-car play without signal clash.Realistic open-and-close doors add to the authentic feel.Front lights light up the action, even in low light.Built-in smoke feature for added drama and a realistic engine vibe.Responsive controls ensure smooth turns, forward/reverse motion, and a powerful drive.Perfect for gifting, display, or RC action, this diecast G-Wagon brings excitement to kids and adults alike!",
+      price: ["1599", "2899"]
+    },
+    {
+      id: 19,
+      image: "/car19-1-removebg-preview.png",
+      name: "Retro Rc Drift Car | 4WD | 30KM/H",
+      description: "Experience the thrill of real drifting with this Retro RC Drift Car, combining classic vintage looks with modern high-speed performance.",
+      Fulldescription: "Experience the thrill of real drifting with this Retro RC Drift Car, combining classic vintage looks with modern high-speed performance. Powered by strong 4WD and dual high-torque motors, this beast hits speeds up to 30km/h and delivers realistic sideways drifts with total control.Whether you're on smooth streets or drift tracks, its powerful grip and stylish retro design make every ride unforgettable.Top Speed: 30km/h.4-Wheel Drive System for perfect drifts.Powerful Motors for instant acceleration.Real Drift Action just like the pros.Vintage Car Aesthetics that stand out everywhere.A must-have for RC enthusiasts who love speed, style, and smoking tires!",
+      price: ["3199", "4499"]
+    },
+    {
+      id: 20,
+      image: "/car20-1-removebg-preview.png",
+      name: "1970 Rc Vintage Dodge Charger",
+      description: "Experience the power and style of a true classic with the 1970 RC Dodge Charger!",
+      Fulldescription: "Experience the power and style of a true classic with the 1970 RC Dodge Charger! This vintage-inspired RC car brings the legendary look of the muscle car era to life, featuring detailed design, bold body lines, and an inbuilt door opening & closing system for added realism.Feel the thrill as you control this beauty with precision, and watch the doors open just like a real car — making it perfect for both collectors and RC lovers.Authentic 1970 Dodge Charger Design.Realistic Door Open/Close Function Classic Vintage Muscle Car Look.Smooth Remote Control Handling.Ideal for Display & On-Road Fun",
+      price: ["1999", "2899 "]
+    },
+    {
+      id: 21,
+      image: "/car21-1-removebg-preview.png",
+      name: "1:43 Rc Mini Drift Car | 4WD",
+      description: "Unleash the drift beast with this 1:43 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted...",
+      Fulldescription: "Unleash the drift beast with this 1:43 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted. Compact yet powerful, this RC drift car comes with fully proportional steering for ultra-smooth control, bright light functions, and slick tires for realistic sideways drifts.Built for style and performance, it’s the perfect pick for anyone who loves precision drifting in a pocket-sized powerhouse.1:43 Scale BMW Drift Car.Fully Proportional Steering for precise handling.Stunning Light Effects for night-time style.Smooth Drift Performance – true Drift King vibes.Inspired by NFS Most Wanted – A Car to Remember!",
+      price: ["1999", "2899 "]
+    },
+    {
+      id: 22,
+      image: "/car22-1-removebg-preview.png",
+      name: "Rc Mini Car | 1:64 Scale",
+      description: "Unleash the drift beast with this 1:64 scale RC Mini Car, inspired by the legends of Need for Speed: Most Wanted...",
+      Fulldescription: "Meet the future of mini RC cars! This 1:64 scale RC Mini Car comes with a premium alloy body, bright LED light function, and next-level smartphone control. Just connect via your Android or iOS app, and you're in full control — no remote needed.One of its coolest features? Draw your own path on the phone, and the car will follow it exactly — like magic.1:64 Scale Compact Design.Control via Android & iOS App.Draw & Drive Feature – Car follows your drawing.Stunning LED Lights for Realistic Look.Durable Alloy Body for Premium Feel.Perfect for Kids & Tech Lovers Alike.Small in size, big on features — the smartest mini RC car you’ll ever own!",
+      price: ["899", "1499 "]
+    },
+    {
+      id: 23,
+      image: "/car23-1-removebg-preview.png",
+      name: "RMini Alloy Off-Road Rc car | 1:64",
+      description: "Unleash the drift beast with this 1:64 scale RC Mini Car, inspired by the legends of Need for Speed: Most Wanted...",
+      Fulldescription: "Meet the future of mini RC cars! This 1:64 scale RC Mini Car comes with a premium alloy body, bright LED light function, and next-level smartphone control. Just connect via your Android or iOS app, and you're in full control — no remote needed.One of its coolest features? Draw your own path on the phone, and the car will follow it exactly — like magic.1:64 Scale Compact Design.Control via Android & iOS App.Draw & Drive Feature – Car follows your drawing.Stunning LED Lights for Realistic Look.Durable Alloy Body for Premium Feel.Perfect for Kids & Tech Lovers Alike.Small in size, big on features — the smartest mini RC car you’ll ever own!",
+      price: ["899", "1499 "]
+    },
+    {
+      id: 24,
+      image: "/car24-1-removebg-preview.png",
+      name: "RC Military Helicopter",
+      description: "Take to the skies with the RC Military Helicopter, designed for high-action aerial missions!",
+      Fulldescription: "Take flight with the RC Military Helicopter, built for high-action aerial missions! Designed with a rugged army-style look, this helicopter features bright light effects and multiple angle flight control, giving you full command in the air.From smooth takeoffs to sharp turns, it delivers a realistic flying experience perfect for both beginners and RC enthusiasts.Military-Inspired Design.Bright LED Light Effects for night missions.Multi-Angle Flying Capability for dynamic moves.Stable Hovering & Smooth Controls.Ready for Indoor & Outdoor Flights",
+      price: ["2499", "2999"]
+    },
+    {
+      id: 25,
+      image: "/car25-1-removebg-preview.png",
+      name: "Hurricane Rc car 4x4 | 50KM Speed | 1:16",
+      description: "RC Hurricane Car, engineered for pure speed and power! With a top speed of 50km/h.",
+      Fulldescription: "RC Hurricane Car, engineered for pure speed and power! With a top speed of 50km/h, real-car-like mechanism, and 4-wheel drive system, this hobby-grade model delivers unbeatable performance on any terrain.Equipped with a multiple light system and precision-built components, it's not just an RC car — it’s a lightning-fast machine made for thrill-seekers.Blazing 50km/h Top Speed – Hurricane-level fast.Realistic Car Mechanism – Just like a true sports car.4WD System for maximum traction and control.Multi-Light System for an aggressive look.Hobby-Grade Build – Durable, powerful, and precise.Designed for Speed – As fast as light, as fierce as a storm",
+      price: ["7749", "11999"]
+    },
+    {
+      id: 26,
+      image: "/car26-1-removebg-preview.png",
+      name: "1:16 Hobby grade Rc car | 50KM Speed",
+      description: "Experience next-level RC performance with this 1:16 scale racing machine, reaching thrilling speeds of up to 50km/h!",
+      Fulldescription: "Experience next-level RC performance with this 1:16 scale racing machine, reaching thrilling speeds of up to 50km/h! Equipped with fully proportional steering and a real-car-like mechanism, this beast offers unmatched control, precision, and excitement.Whether you're racing straight or sliding sideways, the extra set of drift wheels lets you switch from speed to style in seconds. It's not just a toy — it’s a high-speed hobby-grade racer made for real thrill-seekers.Blazing 50km/h Top Speed.Fully Proportional Steering for smooth, accurate handling.Real Car Mechanism – Feels like the real deal.Extra Drift Wheels Included – Switch to drift mode anytime.1:16 Scale – Perfect balance of size and power.As Fast as Light – Built for serious speed lovers",
+      price: ["8499", "14999"]
+    },
     ],
   },
 };
