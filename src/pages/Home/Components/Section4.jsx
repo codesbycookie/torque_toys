@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom"; // import Link
+import { Link } from "react-router-dom";
 import { homepage } from "../../../data/productsData";
 
 export default function Section4({ content }) {
@@ -35,10 +35,10 @@ export default function Section4({ content }) {
             <h2 className="text-3xl font-bold text-gray-900">{content.heading}</h2>
             <p className="mt-1 text-gray-600">{content.description}</p>
           </div>
-          {/* View All Button navigates to /our-products */}
+          {/* View All Button */}
           <Link
             to="/our-products"
-            className="min-w-[65px] px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
+            className="min-w-[70px] justify-center  flex px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
           >
             {content.linkBtn}
           </Link>
@@ -50,25 +50,28 @@ export default function Section4({ content }) {
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
           >
-            {products.map((content) => (
-              <div
-                key={content.id}
-                className="min-w-[250px] flex-shrink-0 group"
+            {products.map((product) => (
+              <Link
+                key={product.id}
+                to={`/our-products/${product.id}`}
+                className="min-w-[250px] flex-shrink-0 group block"
               >
                 <div className="h-60 rounded-xl mb-4 flex items-center justify-center">
                   <img
                     className="h-full w-100 object-contain bg-transparent"
-                    src={content.img}
-                    alt={content.name}
+                    src={product.img}
+                    alt={product.name}
                   />
                 </div>
-                <h3 className="text-lg font-semibold">{content.name}</h3>
-                <p className="text-sm text-gray-500">{content.type}</p>
+                <h3 className="text-lg font-semibold">{product.name}</h3>
+                <p className="text-sm text-gray-500">{product.type}</p>
                 <p className="mt-1 font-bold">
-                  ₹{content.price[0]}{" "}
-                  <span className="text-gray-500 line-through">₹{content.price[1]}</span>
+                  ₹{product.price[0]}{" "}
+                  <span className="text-gray-500 line-through">
+                    ₹{product.price[1]}
+                  </span>
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function Section2({ content }) {
           
           {/* Feature 1 */}
           <div className="flex flex-col items-center text-center">
-            <Car className="w-12 h-12 text-black" />
+            <Car className="w-12 h-12 text-red-500" />
             <h3 className="mt-4 text-lg font-semibold">
               {content.featurecard.card1.title[0]} <br /> {content.featurecard.card1.title[1]}
             </h3>
@@ -32,7 +32,7 @@ export default function Section2({ content }) {
 
           {/* Feature 2 */}
           <div className="flex flex-col items-center text-center">
-            <ShoppingCart className="w-12 h-12 text-black" />
+            <ShoppingCart className="w-12 h-12 text-red-500" />
             <h3 className="mt-4 text-lg font-semibold">
               {content.featurecard.card2.title[0]} <br /> {content.featurecard.card2.title[1]}
             </h3>
@@ -46,7 +46,7 @@ export default function Section2({ content }) {
 
           {/* Feature 3 */}
           <div className="flex flex-col items-center text-center">
-            <Hammer className="w-12 h-12 text-black" />
+            <Hammer className="w-12 h-12 text-red-500" />
             <h3 className="mt-4 text-lg font-semibold">
               {content.featurecard.card3.title[0]} <br /> {content.featurecard.card3.title[1]}
             </h3>

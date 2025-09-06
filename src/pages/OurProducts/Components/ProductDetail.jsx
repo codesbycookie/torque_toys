@@ -1,20 +1,31 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ourproductpage } from "../../../data/productsData";
 import { useCart } from "../../../context/CartContext";
+import { homepage } from "../../../data/productsData";
+import Section4 from "../../Home/Components/Section4";
 
 export default function ProductDetail() {
+  const { section4 } = homepage;
   const { id } = useParams();
   const { addToCart } = useCart();
 
-  const product = ourproductpage.section2.products.find(
-    (p) => p.id === parseInt(id)
-  );
+  const [product, setProduct] = useState(null);
+  const [selectedImage, setSelectedImage] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
-  const [selectedImage, setSelectedImage] = useState(product?.image);
-  const [showModal, setShowModal] = useState(false); // For modal visibility
+  // 🔥 Load product when `id` changes
+  useEffect(() => {
+    const foundProduct = ourproductpage.section2.products.find(
+      (p) => p.id === parseInt(id)
+    );
+    setProduct(foundProduct);
+    setSelectedImage(foundProduct?.image || "");
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const handleAddToCart = () => {
+    if (!product) return;
     addToCart(product);
     setShowModal(true);
     setTimeout(() => setShowModal(false), 2000); // Auto close after 2s
@@ -103,24 +114,24 @@ export default function ProductDetail() {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4 mt-6">
-            <button
-              onClick={handleAddToCart}
-              className="px-6 py-3 border border-gray-800 rounded-lg hover:bg-gray-100 transition font-medium"
-            >
-              Add to Cart
-            </button>
             <Link
               to="/our-products"
               className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition font-medium"
             >
               Back to Products
             </Link>
+            <button
+              onClick={handleAddToCart}
+              className="px-6 py-3 border border-gray-800 rounded-lg hover:bg-gray-100 transition font-medium"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Description Section */}
-     
+      {/* Related Products Section */}
+      <Section4 content={section4} />
     </div>
   );
 }

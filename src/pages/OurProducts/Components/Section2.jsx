@@ -146,19 +146,20 @@ const ProductCard = ({ product, handleAddToCart }) => (
         </div>
       </div>
 
-      <div className="mt-6 flex space-x-3">
-        <button
-          onClick={() => handleAddToCart(product)}
-          className="flex-1 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-all duration-200 flex items-center justify-center"
-        >
-          <PlusIcon /> Add to Cart
-        </button>
+      <div className="mt-6 flex space-x-3" >
+        
         <Link
           to={`/our-products/${product.id}`}
           className="flex-1 px-4 py-3 bg-black text-white rounded-lg text-center font-medium hover:bg-transparent hover:text-black border border-black transition-all duration-200 flex items-center justify-center"
         >
           <EyeIcon /> Details
         </Link>
+        <button
+          onClick={() => handleAddToCart(product)}
+          className="flex-1 px-4 py-3 border border-gray rounded-lg text-black font-medium hover:bg-gray-50 transition-all duration-200 flex items-center justify-center"
+        >
+          <PlusIcon /> Add to Cart
+        </button>
       </div>
     </div>
   </div>
