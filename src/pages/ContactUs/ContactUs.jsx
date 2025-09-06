@@ -4,18 +4,61 @@ import emailjs from "@emailjs/browser";
 export default function ContactUs() {
   const formRef = useRef(null);
   const [status, setStatus] = useState({ loading: false, ok: false, error: "" });
+  const [errors, setErrors] = useState({});
+
+  const validateForm = (formData) => {
+    const newErrors = {};
+
+    // Name validation (only letters and spaces)
+    if (!formData.from_name.trim()) {
+      newErrors.from_name = "Name is required.";
+    } else if (!/^[A-Za-z\s]+$/.test(formData.from_name)) {
+      newErrors.from_name = "Name should only contain letters and spaces.";
+    }
+
+    // Email validation
+    if (!formData.from_email.trim()) {
+      newErrors.from_email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.from_email)) {
+      newErrors.from_email = "Enter a valid email address.";
+    }
+
+    // Phone validation (only numbers, optional +, -, spaces)
+    if (formData.from_phone) {
+      if (!/^\+?[0-9\s-]{7,15}$/.test(formData.from_phone)) {
+        newErrors.from_phone = "Enter a valid phone number with numbers only.";
+      }
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const formData = {
+      from_name: e.target.from_name.value,
+      from_email: e.target.from_email.value,
+      from_phone: e.target.from_phone.value,
+      message: e.target.message.value,
+    };
+
+    if (!validateForm(formData)) return;
+
     setStatus({ loading: true, ok: false, error: "" });
 
     try {
-      // Vite style env. If you're on CRA, replace import.meta.env.* with process.env.*
       await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,   // or process.env.REACT_APP_EMAILJS_SERVICE_ID
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,  // or process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY } // or process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       );
 
       setStatus({ loading: false, ok: true, error: "" });
@@ -33,7 +76,7 @@ export default function ContactUs() {
     <section className="bg-white">
       {/* Contact Section */}
       <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto px-6 py-16">
-        {/* Left Side - Image in Stylish Card */}
+        {/* Left Side - Image */}
         <div className="flex justify-center items-center">
           <div className="w-full max-w-md bg-white">
             <img
@@ -55,8 +98,13 @@ export default function ContactUs() {
               and we'll get back to you as soon as possible.
             </p>
 
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
-              {/* Honeypot (invisible, blocks basic bots) */}
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              autoComplete="off"
+            >
+              {/* Honeypot */}
               <input
                 type="text"
                 name="company"
@@ -74,9 +122,15 @@ export default function ContactUs() {
                   name="from_name"
                   type="text"
                   placeholder="John Doe"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition"
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${
+                    errors.from_name
+                      ? "border-red-500 focus:ring-red-500"
+                      : "border-gray-300 focus:ring-black"
+                  }`}
                 />
+                {errors.from_name && (
+                  <p className="text-red-600 text-sm">{errors.from_name}</p>
+                )}
               </div>
 
               {/* Email */}
@@ -88,9 +142,15 @@ export default function ContactUs() {
                   name="from_email"
                   type="email"
                   placeholder="you@example.com"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition"
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${
+                    errors.from_email
+                      ? "border-red-500 focus:ring-red-500"
+                      : "border-gray-300 focus:ring-black"
+                  }`}
                 />
+                {errors.from_email && (
+                  <p className="text-red-600 text-sm">{errors.from_email}</p>
+                )}
               </div>
 
               {/* Phone */}
@@ -102,8 +162,15 @@ export default function ContactUs() {
                   name="from_phone"
                   type="tel"
                   placeholder="+1 234 567 890"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition"
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${
+                    errors.from_phone
+                      ? "border-red-500 focus:ring-red-500"
+                      : "border-gray-300 focus:ring-black"
+                  }`}
                 />
+                {errors.from_phone && (
+                  <p className="text-red-600 text-sm">{errors.from_phone}</p>
+                )}
               </div>
 
               {/* Message */}
@@ -115,9 +182,15 @@ export default function ContactUs() {
                   name="message"
                   placeholder="Write your message..."
                   rows="4"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition"
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${
+                    errors.message
+                      ? "border-red-500 focus:ring-red-500"
+                      : "border-gray-300 focus:ring-black"
+                  }`}
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-600 text-sm">{errors.message}</p>
+                )}
               </div>
 
               {/* Status messages */}
@@ -143,7 +216,7 @@ export default function ContactUs() {
         </div>
       </div>
 
-      {/* Google Map Section (unchanged) */}
+      {/* Google Map */}
       <div className="container mx-auto px-6 pb-16">
         <div className="w-full h-96 rounded-xl overflow-hidden shadow-lg">
           <iframe
