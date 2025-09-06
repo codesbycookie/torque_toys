@@ -8,6 +8,9 @@ import Footer from "../pages/Components/Footer";
 import Errorpage from "../pages/404ErrorPage/Errorpage";
 import ProductDetail from "../pages/OurProducts/Components/ProductDetail";
 import CartPage from "../pages/Cart/CartPage"
+import PrivacyPolicy from "../pages/PrivacyPolicy/privacypolicy";
+import TermsOfService from "../pages/TermsConditons/TermsConditons";
+
 
 
 export default function App() {
@@ -23,6 +26,8 @@ export default function App() {
         <Route path="/our-products/:id" element={<ProductDetail />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsOfService />} />
         <Route path="/*" element={<Errorpage />} />
       </Routes>
       <Footer />
