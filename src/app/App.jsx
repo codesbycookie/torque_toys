@@ -8,7 +8,7 @@ import Footer from "../pages/Components/Footer";
 import Errorpage from "../pages/404ErrorPage/Errorpage";
 import ProductDetail from "../pages/OurProducts/Components/ProductDetail";
 import CartPage from "../pages/Cart/CartPage"
-import PrivacyPolicy from "../pages/PrivacyPolicy/privacypolicy";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "../pages/TermsConditons/TermsConditons";
 
 
