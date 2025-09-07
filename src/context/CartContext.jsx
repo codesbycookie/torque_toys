@@ -60,7 +60,7 @@ export function CartProvider({ children }) {
       })
       .join("\n");
 
- const message = `*🏎️ TORQUE TOYZZ*
+ const message = `* TORQUE TOYZZ - 🚗 RC Cars, 🚜 JCBS, 🏎️ RC Trucks*
 Customer Care : +91-9600142392
 Website       : www.torquetoyzz.com
 ------------------------------------
@@ -71,25 +71,23 @@ Website       : www.torquetoyzz.com
 ----------------
 1️⃣ *Name*    : ${formData.name}
 2️⃣ *Phone*   : ${formData.phone}
-3️⃣ *Contact* : ${formData.contact}
-4️⃣ *Address* : ${formData.address}
+
 
 *📦 Shipping Details*
 ----------------
-1️⃣ *Address* : ${formData.shippingAddress}
-2️⃣ *Contact* : ${formData.shippingContact}
+1️⃣ *Contact* : ${formData.contact}
+2️⃣ *Address* : ${formData.address}
 
-*🛍️ Products*
+*🛍️ Products Ordered*
 ----------------
 \`\`\`
-S.No   Product           Qty    Price
+S.No   Product          Qty    Price
 ${cartDetails}
 \`\`\`
 
 ------------------------------------
 Thank you for shopping with *Torque Toyzz*!
 `;
-
     const whatsappUrl = `https://wa.me/919600142392?text=${encodeURIComponent(
       message
     )}`;
