@@ -60,31 +60,34 @@ export function CartProvider({ children }) {
       })
       .join("\n");
 
-    const message = `Torque Toyzz
+ const message = `*🏎️ TORQUE TOYZZ*
 Customer Care : +91-9600142392
 Website       : www.torquetoyzz.com
 ------------------------------------
 
-New Order Placed
+*🛒 NEW ORDER PLACED*
 
-Customer Details
+*👤 Customer Details*
 ----------------
-Name    : ${formData.name}
-Phone   : ${formData.phone}
-Contact : ${formData.contact}
-Address : ${formData.address}
+1️⃣ *Name*    : ${formData.name}
+2️⃣ *Phone*   : ${formData.phone}
+3️⃣ *Contact* : ${formData.contact}
+4️⃣ *Address* : ${formData.address}
 
-Shipping Details
+*📦 Shipping Details*
 ----------------
-Address : ${formData.shippingAddress}
-Contact : ${formData.shippingContact}
+1️⃣ *Address* : ${formData.shippingAddress}
+2️⃣ *Contact* : ${formData.shippingContact}
 
-Products
---------
+*🛍️ Products*
+----------------
+\`\`\`
+S.No   Product           Qty    Price
 ${cartDetails}
+\`\`\`
 
 ------------------------------------
-Thank you for shopping with Torque Toyzz!
+Thank you for shopping with *Torque Toyzz*!
 `;
 
     const whatsappUrl = `https://wa.me/919600142392?text=${encodeURIComponent(
