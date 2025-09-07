@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { useCart } from "../../context/CartContext.jsx";
 
@@ -19,20 +19,32 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center space-x-10 text-gray-700 font-medium">
-          {["Home", "About Us", "Our Products", "Contact Us"].map((label, i) => {
-            const paths = ["/", "/about-us", "/our-products", "/contact-us"];
-            return (
-              <li key={i}>
-                <Link
-                  to={paths[i]}
-                  className="hover:text-black transition-colors duration-200 font-semibold relative group"
-                >
-                  {label}
-                  <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-black group-hover:w-full transition-all duration-300"></span>
-                </Link>
-              </li>
-            );
-          })}
+          {["Home", "About Us", "Our Products", "Contact Us"].map(
+            (label, i) => {
+              const paths = ["/", "/about-us", "/our-products", "/contact-us"];
+              return (
+                <li key={i}>
+                  <NavLink
+                    to={paths[i]}
+                    className={({ isActive }) =>
+                      `transition-colors duration-200 font-semibold relative group 
+     ${isActive ? "text-black" : "hover:text-black"}`
+                    }
+                  >
+                    {({ isActive }) => (
+                      <>
+                        {label}
+                        <span
+                          className={`absolute left-0 bottom-0 h-[1px] bg-black transition-all duration-300
+          ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
+                        ></span>
+                      </>
+                    )}
+                  </NavLink>
+                </li>
+              );
+            }
+          )}
         </ul>
 
         {/* Cart Button (Desktop) */}
@@ -40,7 +52,10 @@ export default function Navbar() {
           to="/cart"
           className="hidden md:flex items-center ml-6 px-5 py-2 bg-black text-white rounded-xl hover:bg-gray-800 transition-all duration-300 relative shadow-md group"
         >
-          <ShoppingCart className="mr-2 group-hover:scale-110 transition-transform" size={18} />
+          <ShoppingCart
+            className="mr-2 group-hover:scale-110 transition-transform"
+            size={18}
+          />
           Cart
           {cart.length > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full shadow-md animate-pulse">
@@ -61,9 +76,7 @@ export default function Navbar() {
 
       {/* Mobile Menu - Fully Unmounted When Closed */}
       {isOpen && (
-        <div
-          className="md:hidden bg-white/90 backdrop-blur-md shadow-lg border-t border-gray-100 px-6 py-6 space-y-6 animate-slideDown"
-        >
+        <div className="md:hidden bg-white/90 backdrop-blur-md shadow-lg border-t border-gray-100 px-6 py-6 space-y-6 animate-slideDown">
           {[
             { label: "Home", path: "/" },
             { label: "About Us", path: "/about-us" },

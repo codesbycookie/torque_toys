@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useCart } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import { Trash2, Lock, Check, ShoppingCart, User } from "lucide-react";
 
 export default function CartPage() {
-  const { cart, removeFromCart, updateQuantity, clearCart } = useCart();
+  const { cart, removeFromCart, updateQuantity, sendOrder } = useCart();
   const [showForm, setShowForm] = useState(false);
-  const [carPosition, setCarPosition] = useState(0);
-  const [smokeParticles, setSmokeParticles] = useState([]);
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -17,37 +16,8 @@ export default function CartPage() {
     shippingContact: "",
     sameAsBilling: true,
   });
+
   const [formErrors, setFormErrors] = useState({});
-
-  // Animate car movement when showForm changes
-  useEffect(() => {
-    const targetPosition = showForm ? 50 : 0; // 0% for step 1, 50% for step 2
-    setCarPosition(targetPosition);
-    
-    // Add smoke particles when moving
-    if (showForm) {
-      addSmokeEffect();
-    }
-  }, [showForm]);
-
-  const addSmokeEffect = () => {
-    const newParticles = [];
-    for (let i = 0; i < 5; i++) {
-      newParticles.push({
-        id: Date.now() + i,
-        left: 45 + Math.random() * 10, // Position near the car
-        size: 3 + Math.random() * 4,
-        opacity: 0.7,
-        animationDelay: i * 0.1,
-      });
-    }
-    setSmokeParticles(newParticles);
-    
-    // Clear particles after animation
-    setTimeout(() => {
-      setSmokeParticles([]);
-    }, 2000);
-  };
 
   const getPrice = (price) => {
     const rawPrice = Array.isArray(price) ? price[0] : price;
@@ -59,7 +29,9 @@ export default function CartPage() {
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
-      ...(name === "sameAsBilling" && checked ? { shippingAddress: prev.address, shippingContact: prev.contact } : {}),
+      ...(name === "sameAsBilling" && checked
+        ? { shippingAddress: prev.address, shippingContact: prev.contact }
+        : {}),
     }));
     setFormErrors((prev) => ({ ...prev, [name]: "" }));
   };
@@ -69,7 +41,8 @@ export default function CartPage() {
     if (!formData.name) errors.name = "Full Name is required";
     if (!formData.phone) errors.phone = "Phone Number is required";
     if (!formData.address) errors.address = "Billing Address is required";
-    if (!formData.shippingAddress && !formData.sameAsBilling) errors.shippingAddress = "Shipping Address is required";
+    if (!formData.shippingAddress && !formData.sameAsBilling)
+      errors.shippingAddress = "Shipping Address is required";
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
@@ -77,32 +50,7 @@ export default function CartPage() {
   const handleCheckout = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-    const cartDetails = cart
-      .map((item, idx) => {
-        const itemPrice = getPrice(item.price);
-        return `${idx + 1}) ${item.name} - ${item.quantity} x ₹${itemPrice} = ₹${
-          itemPrice * item.quantity
-        }`;
-      })
-      .join("\n");
-
-    const message = `🛒 New Order Placed\n
-Name: ${formData.name}
-Phone: ${formData.phone}
-Contact: ${formData.contact}
-Address: ${formData.address}
-Shipping Address: ${formData.shippingAddress}
-Shipping Contact: ${formData.shippingContact}
-
-🛍️ Products:
-${cartDetails}`;
-
-    const whatsappUrl = `https://wa.me/919600142392?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappUrl, "_blank");
-    clearCart();
-    localStorage.removeItem("cartItems");
+    sendOrder(formData);
     setShowForm(false);
   };
 
@@ -120,58 +68,83 @@ ${cartDetails}`;
             {/* Animated Car */}
             {/* Animated Car */}
 
-
-            
             {/* Step 1: Cart */}
             <div className="flex flex-col items-center z-20">
-              <div className={`flex items-center justify-center w-12 h-12 rounded-full ${showForm ? "bg-gray-200" : "bg-black"} transition-all duration-500 relative`}>
+              <div
+                className={`flex items-center justify-center w-12 h-12 rounded-full ${
+                  showForm ? "bg-gray-200" : "bg-black"
+                } transition-all duration-500 relative`}
+              >
                 {showForm ? (
                   <Check className="w-6 h-6 text-green-600" />
                 ) : (
                   <ShoppingCart className="w-6 h-6 text-white" />
                 )}
               </div>
-              <span className={`mt-2 text-sm font-medium ${showForm ? "text-gray-600" : "text-black"}`}>Cart</span>
+              <span
+                className={`mt-2 text-sm font-medium ${
+                  showForm ? "text-gray-600" : "text-black"
+                }`}
+              >
+                Cart
+              </span>
             </div>
-            
+
             {/* Connector Line */}
-            <div className={`flex-1 h-2 mx-2 ${showForm ? "bg-black" : "bg-gray-300"} transition-all duration-1000 rounded-full`}></div>
-            
+            <div
+              className={`flex-1 h-2 mx-2 ${
+                showForm ? "bg-black" : "bg-gray-300"
+              } transition-all duration-1000 rounded-full`}
+            ></div>
+
             {/* Step 2: Details */}
             <div className="flex flex-col items-center z-20">
-              <div className={`flex items-center justify-center w-12 h-12 rounded-full ${showForm ? "bg-black" : "bg-gray-200"} transition-all duration-500`}>
+              <div
+                className={`flex items-center justify-center w-12 h-12 rounded-full ${
+                  showForm ? "bg-black" : "bg-gray-200"
+                } transition-all duration-500`}
+              >
                 {showForm ? (
                   <User className="w-6 h-6 text-white" />
                 ) : (
                   <span className="text-gray-500">2</span>
                 )}
               </div>
-              <span className={`mt-2 text-sm font-medium ${showForm ? "text-black" : "text-gray-600"}`}>Details</span>
+              <span
+                className={`mt-2 text-sm font-medium ${
+                  showForm ? "text-black" : "text-gray-600"
+                }`}
+              >
+                Details
+              </span>
             </div>
-            
+
             {/* Connector Line */}
             <div className="flex-1 h-2 mx-2 bg-gray-300 rounded-full"></div>
-            
+
             {/* Step 3: Confirmation */}
             <div className="flex flex-col items-center z-20">
               <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200">
                 <span className="text-gray-500">3</span>
               </div>
-              <span className="mt-2 text-sm font-medium text-gray-600">Confirmation</span>
+              <span className="mt-2 text-sm font-medium text-gray-600">
+                Confirmation
+              </span>
             </div>
           </div>
         </div>
-        
+
         {/* Progress Text */}
         <div className="text-center">
           <h2 className="text-xl font-bold text-gray-900">
-            {!showForm ? "Review Your Cart Items" : "Almost There! Just Your Details Needed"}
+            {!showForm
+              ? "Review Your Cart Items"
+              : "Almost There! Just Your Details Needed"}
           </h2>
           <p className="text-gray-600 mt-1">
-            {!showForm 
-              ? "Check your items before proceeding to checkout" 
-              : "Fill in your information to complete your order"
-            }
+            {!showForm
+              ? "Check your items before proceeding to checkout"
+              : "Fill in your information to complete your order"}
           </p>
         </div>
 
@@ -252,7 +225,9 @@ ${cartDetails}`;
                       />
                     )}
                     <div>
-                      <h2 className="font-semibold text-base sm:text-lg text-gray-900">{item.name}</h2>
+                      <h2 className="font-semibold text-base sm:text-lg text-gray-900">
+                        {item.name}
+                      </h2>
                       <p className="text-gray-500 text-sm">₹{rawPrice}</p>
                       <div className="flex items-center gap-2 mt-3">
                         <button
@@ -267,7 +242,9 @@ ${cartDetails}`;
                         >
                           -
                         </button>
-                        <span className="px-2 font-medium w-10 text-center">{item.quantity}</span>
+                        <span className="px-2 font-medium w-10 text-center">
+                          {item.quantity}
+                        </span>
                         <button
                           onClick={() =>
                             updateQuantity(item.id, item.quantity + 1)
@@ -304,9 +281,12 @@ ${cartDetails}`;
           <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border sticky top-20 self-start">
             {!showForm ? (
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">Order Summary</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">
+                  Order Summary
+                </h3>
                 <p className="text-gray-600 mb-6">
-                  You have <strong>{cart.length}</strong> item{cart.length > 1 ? "s" : ""} ready for checkout.
+                  You have <strong>{cart.length}</strong> item
+                  {cart.length > 1 ? "s" : ""} ready for checkout.
                 </p>
                 <div className="flex items-center gap-2 mb-4 text-gray-600">
                   <Lock className="w-5 h-5" />
@@ -322,10 +302,15 @@ ${cartDetails}`;
               </div>
             ) : (
               <form onSubmit={handleCheckout} className="space-y-4">
-                <h3 className="text-xl sm:text-2xl font-bold mb-6 text-gray-900">Checkout Details</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-6 text-gray-900">
+                  Checkout Details
+                </h3>
                 <div className="space-y-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -337,14 +322,21 @@ ${cartDetails}`;
                       onChange={handleChange}
                       className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:ring-2 focus:ring-black focus:border-black transition"
                       required
-                      aria-describedby={formErrors.name ? "name-error" : undefined}
+                      aria-describedby={
+                        formErrors.name ? "name-error" : undefined
+                      }
                     />
                     {formErrors.name && (
-                      <p id="name-error" className="text-red-500 text-xs mt-1">{formErrors.name}</p>
+                      <p id="name-error" className="text-red-500 text-xs mt-1">
+                        {formErrors.name}
+                      </p>
                     )}
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Phone Number *
                     </label>
                     <input
@@ -356,14 +348,21 @@ ${cartDetails}`;
                       onChange={handleChange}
                       className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:ring-2 focus:ring-black focus:border-black transition"
                       required
-                      aria-describedby={formErrors.phone ? "phone-error" : undefined}
+                      aria-describedby={
+                        formErrors.phone ? "phone-error" : undefined
+                      }
                     />
                     {formErrors.phone && (
-                      <p id="phone-error" className="text-red-500 text-xs mt-1">{formErrors.phone}</p>
+                      <p id="phone-error" className="text-red-500 text-xs mt-1">
+                        {formErrors.phone}
+                      </p>
                     )}
                   </div>
                   <div>
-                    <label htmlFor="contact" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="contact"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Alternate Contact (Optional)
                     </label>
                     <input
@@ -377,7 +376,10 @@ ${cartDetails}`;
                     />
                   </div>
                   <div>
-                    <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="address"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Billing Address *
                     </label>
                     <textarea
@@ -389,10 +391,17 @@ ${cartDetails}`;
                       className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:ring-2 focus:ring-black focus:border-black transition"
                       rows="3"
                       required
-                      aria-describedby={formErrors.address ? "address-error" : undefined}
+                      aria-describedby={
+                        formErrors.address ? "address-error" : undefined
+                      }
                     />
                     {formErrors.address && (
-                      <p id="address-error" className="text-red-500 text-xs mt-1">{formErrors.address}</p>
+                      <p
+                        id="address-error"
+                        className="text-red-500 text-xs mt-1"
+                      >
+                        {formErrors.address}
+                      </p>
                     )}
                   </div>
                   <div className="flex items-center gap-2">
@@ -404,14 +413,20 @@ ${cartDetails}`;
                       onChange={handleChange}
                       className="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
                     />
-                    <label htmlFor="sameAsBilling" className="text-sm text-gray-700">
+                    <label
+                      htmlFor="sameAsBilling"
+                      className="text-sm text-gray-700"
+                    >
                       Shipping same as billing
                     </label>
                   </div>
                   {!formData.sameAsBilling && (
                     <>
                       <div>
-                        <label htmlFor="shippingAddress" className="block text-sm font-medium text-gray-700 mb-1">
+                        <label
+                          htmlFor="shippingAddress"
+                          className="block text-sm font-medium text-gray-700 mb-1"
+                        >
                           Shipping Address *
                         </label>
                         <textarea
@@ -423,14 +438,26 @@ ${cartDetails}`;
                           className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:ring-2 focus:ring-black focus:border-black transition"
                           rows="3"
                           required
-                          aria-describedby={formErrors.shippingAddress ? "shippingAddress-error" : undefined}
+                          aria-describedby={
+                            formErrors.shippingAddress
+                              ? "shippingAddress-error"
+                              : undefined
+                          }
                         />
                         {formErrors.shippingAddress && (
-                          <p id="shippingAddress-error" className="text-red-500 text-xs mt-1">{formErrors.shippingAddress}</p>
+                          <p
+                            id="shippingAddress-error"
+                            className="text-red-500 text-xs mt-1"
+                          >
+                            {formErrors.shippingAddress}
+                          </p>
                         )}
                       </div>
                       <div>
-                        <label htmlFor="shippingContact" className="block text-sm font-medium text-gray-700 mb-1">
+                        <label
+                          htmlFor="shippingContact"
+                          className="block text-sm font-medium text-gray-700 mb-1"
+                        >
                           Shipping Contact (Optional)
                         </label>
                         <input

@@ -75,7 +75,7 @@ export default function ContactUs() {
   return (
     <section className="bg-white">
       {/* Contact Section */}
-      <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto px-6 py-16">
+      <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-8 container mx-auto px-6 py-16">
         {/* Left Side - Image */}
         <div className="flex justify-center items-center">
           <div className="w-full max-w-md bg-white">
