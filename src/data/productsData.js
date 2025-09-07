@@ -291,9 +291,9 @@ export const ourproductpage = {
     {
       id: 12,
       image: "/car13-1-removebg-preview.png",
-      name: "RC High Speed Drift Car - 1:16",
-      description: "Bring home the thrill of a supercar with this premium 1:32 scale Die-Cast Lamborghini...",
-      Fulldescription: "Bring home the thrill of a supercar with this premium 1:32 scale Die-Cast Lamborghini! Crafted with attention to detail, it features openable doors, realistic engine sound, working lights, and a pull-back action for added fun. 1:32 Scale Die-Cast Model. Openable Doors for realistic play. Sound & Light Effects. Pull-Back Function – just pull and release. High-Quality Metal Body. A perfect collectible and play car for kids and supercar lovers.",
+      name: "RC High Speed Drift Car - 1:16 | 30KM/h",
+      description: "Get ready to burn rubber with this 1:16 scale RC Drift Car, engineered for performance and style!...",
+      Fulldescription: "Get ready to burn rubber with this 1:16 scale RC Drift Car, engineered for performance and style! With proportional steering and an impressive 30 km/h top speed, this beast offers smooth handling and thrilling drifts. Comes with 4 racing tires and a speed adjustment button on the remote, giving you full control over every move.30 KM/H High-Speed Performance.Proportional Steering for Precise Control.Speed Adjustment Button on Remote. 4 Racing Drift Tires for Smooth Sliding.Rechargeable Battery for Long Playtime.1:16 Scale – Perfect Size for Drift Action.Whether you're racing or drifting, this car delivers adrenaline-packed fun for RC enthusiasts of all levels!",
       price: ["2200", "2999"]
     },
     {
