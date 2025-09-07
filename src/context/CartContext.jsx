@@ -60,16 +60,32 @@ export function CartProvider({ children }) {
       })
       .join("\n");
 
-    const message =`🛒 New Order Placed\n
-Name: ${formData.name}
-Phone: ${formData.phone}
-Contact: ${formData.contact}
-Address: ${formData.address}
-Shipping Address: ${formData.shippingAddress}
-Shipping Contact: ${formData.shippingContact}
+    const message = `Torque Toyzz
+Customer Care : +91-9600142392
+Website       : www.torquetoyzz.com
+------------------------------------
 
-🛍️ Products:
-${cartDetails}`;
+New Order Placed
+
+Customer Details
+----------------
+Name    : ${formData.name}
+Phone   : ${formData.phone}
+Contact : ${formData.contact}
+Address : ${formData.address}
+
+Shipping Details
+----------------
+Address : ${formData.shippingAddress}
+Contact : ${formData.shippingContact}
+
+Products
+--------
+${cartDetails}
+
+------------------------------------
+Thank you for shopping with Torque Toyzz!
+`;
 
     const whatsappUrl = `https://wa.me/919600142392?text=${encodeURIComponent(
       message
