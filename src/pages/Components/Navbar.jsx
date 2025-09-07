@@ -93,20 +93,7 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {/* Cart Button (Mobile) */}
-          <Link
-            to="/cart"
-            className="w-full flex items-center justify-center px-4 py-2 bg-black text-white rounded-xl hover:bg-gray-800 transition relative shadow-md"
-            onClick={() => setIsOpen(false)}
-          >
-            <ShoppingCart className="mr-2" size={18} />
-            Cart
-            {cart.length > 0 && (
-              <span className="absolute top-1 right-10 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full shadow-md animate-pulse">
-                {cart.length}
-              </span>
-            )}
-          </Link>
+          
         </div>
       )}
     </nav>

@@ -12,6 +12,8 @@ import CartPage from "../pages/Cart/CartPage";
 import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "../pages/TermsConditons/TermsConditons";
 import { CartProvider } from "../context/CartContext.jsx";
+import FloaterCart from "../pages/Components/FloaterCart";
+
 export default function AppRoutes() {
   const MainLayout = ({ children }) => (
     <>
@@ -30,6 +32,7 @@ export default function AppRoutes() {
             element={
               <MainLayout>
                 <Home />
+                <FloaterCart />
               </MainLayout>
             }
           />
@@ -38,6 +41,7 @@ export default function AppRoutes() {
             element={
               <MainLayout>
                 <About />
+                <FloaterCart />
               </MainLayout>
             }
           />
@@ -46,6 +50,7 @@ export default function AppRoutes() {
             element={
               <MainLayout>
                 <Products />
+                <FloaterCart />
               </MainLayout>
             }
           />
@@ -54,6 +59,7 @@ export default function AppRoutes() {
             element={
               <MainLayout>
                 <ProductDetail />
+                <FloaterCart />
               </MainLayout>
             }
           />
@@ -62,6 +68,7 @@ export default function AppRoutes() {
             element={
               <MainLayout>
                 <Contact />
+                <FloaterCart />
               </MainLayout>
             }
           />

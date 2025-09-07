@@ -51,46 +51,60 @@ export function CartProvider({ children }) {
   };
 
   const sendOrder = (formData) => {
-    const cartDetails = cart
-      .map((item, idx) => {
-        const itemPrice = getPrice(item.price);
-        return `${idx + 1}) ${item.name} - ${
-          item.quantity
-        } x ₹${itemPrice} = ₹${itemPrice * item.quantity}`;
-      })
-      .join("\n");
 
- const message = `* TORQUE TOYZZ - 🚗 RC Cars, 🚜 JCBS, 🏎️ RC Trucks*
+    const cartDetails = cart
+  .map((item, idx) => {
+    const itemPrice = getPrice(item.price);
+    const total = itemPrice * item.quantity;
+
+    return (
+      `${String(idx + 1).padEnd(4)} ${String(item.quantity).padEnd(4)} ₹${itemPrice} x ${item.quantity} = ₹${total}\n    ${item.name}`
+    );
+  })
+  .join("\n\n");
+
+const totalAmount = cart.reduce(
+  (sum, item) => sum + getPrice(item.price) * item.quantity,
+  0
+);
+
+const message = `*TORQUE TOYZZ - Remote Control Toys*
 Customer Care : +91-9600142392
 Website       : www.torquetoyzz.com
 ------------------------------------
 
-*🛒 NEW ORDER PLACED*
+*NEW ORDER PLACED*
 
-*👤 Customer Details*
+*Customer Details*
 ----------------
-1️⃣ *Name*    : ${formData.name}
-2️⃣ *Phone*   : ${formData.phone}
+  Name    : ${formData.name}
+  Phone   : ${formData.phone}
 
-
-*📦 Shipping Details*
+*Shipping Details*
 ----------------
-1️⃣ *Contact* : ${formData.contact}
-2️⃣ *Address* : ${formData.address}
+  Contact : ${formData.contact}
+  Address : ${formData.address}
 
-*🛍️ Products Ordered*
+*Products Ordered*
 ----------------
 \`\`\`
-S.No   Product          Qty    Price
+S.No  Qty   Price
 ${cartDetails}
+
+-------------------------
+Total Amount : ₹${totalAmount}
 \`\`\`
 
 ------------------------------------
 Thank you for shopping with *Torque Toyzz*!
 `;
-    const whatsappUrl = `https://wa.me/919600142392?text=${encodeURIComponent(
-      message
-    )}`;
+
+const whatsappUrl = `https://wa.me/916385138282?text=${encodeURIComponent(
+  message
+)}`;
+
+
+
     window.open(whatsappUrl, "_blank");
     clearCart();
     localStorage.removeItem("cartItems");
