@@ -99,7 +99,7 @@ Total Amount : ₹${totalAmount}
 Thank you for shopping with *Torque Toyzz*!
 `;
 
-const whatsappUrl = `https://wa.me/916385138282?text=${encodeURIComponent(
+const whatsappUrl = `https://wa.me/919600142392?text=${encodeURIComponent(
   message
 )}`;
 
