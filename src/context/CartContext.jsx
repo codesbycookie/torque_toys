@@ -60,7 +60,7 @@ export function CartProvider({ children }) {
       })
       .join("\n");
 
-    const message = ```🛒 New Order Placed\n
+    const message =`🛒 New Order Placed\n
 Name: ${formData.name}
 Phone: ${formData.phone}
 Contact: ${formData.contact}
@@ -69,7 +69,7 @@ Shipping Address: ${formData.shippingAddress}
 Shipping Contact: ${formData.shippingContact}
 
 🛍️ Products:
-${cartDetails}```;
+${cartDetails}`;
 
     const whatsappUrl = `https://wa.me/919600142392?text=${encodeURIComponent(
       message
