@@ -361,10 +361,10 @@ export const ourproductpage = {
       {
         id: 21,
         image: "/car21-1-removebg-preview.png",
-        name: "1:43 Rc Mini Drift Car | 4WD",
-        description: "Unleash the drift beast with this 1:43 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted...",
-        Fulldescription: "Unleash the drift beast with this 1:43 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted. Compact yet powerful, this RC drift car comes with fully proportional steering for ultra-smooth control, bright light functions, and slick tires for realistic sideways drifts.Built for style and performance, it’s the perfect pick for anyone who loves precision drifting in a pocket-sized powerhouse.1:43 Scale BMW Drift Car.Fully Proportional Steering for precise handling.Stunning Light Effects for night-time style.Smooth Drift Performance – true Drift King vibes.Inspired by NFS Most Wanted – A Car to Remember!",
-        price: ["1999", "2899 "]
+        name: "1:46 BMW Rc Mini Drift Car | 4WD",
+        description: "Unleash the drift beast with this 1:46 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted...",
+        Fulldescription: "Unleash the drift beast with this 1:46 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted. Compact yet powerful, this RC drift car comes with fully proportional steering for ultra-smooth control, bright light functions, and slick tires for realistic sideways drifts.Built for style and performance, it’s the perfect pick for anyone who loves precision drifting in a pocket-sized powerhouse.1:46 Scale BMW Drift Car.Fully Proportional Steering for precise handling.Stunning Light Effects for night-time style.Smooth Drift Performance – true Drift King vibes.Inspired by NFS Most Wanted – A Car to Remember!",
+        price: ["3699", "4999"]
       },
       {
         id: 22,

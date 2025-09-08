@@ -30,17 +30,17 @@ export default function TermsOfService() {
             {
               title: "3. Pricing & Payment",
               content:
-                "All prices are listed in Rupees and may change without notice. We accept UPI, Credit/Debit cards, and Net Banking.",
+                "Cash on Delivery (COD) is available. For COD orders, you must pay: The product price, and ₹150 for cash handling charge to the courier person. Prepaid payments also accepted via UPI.",
             },
             {
               title: "4. Shipping & Delivery",
               content:
-                "We deliver all over Tamil Nadu. Delivery timelines vary based on location. We are not responsible for delays caused by courier services or unforeseen circumstances.",
+                "All orders are shipped within a working days after confirmation.Delivery takes 1–3 working days depending on your location.Tracking details will be shared once the order is dispatched.We are not responsible for delays caused by courier companies.",
             },
             {
               title: "5. Returns & Refunds",
               content:
-                "There is no standard return policy, but if there is any physical damage during delivery, we may replace the product provided the customer shares a clear video of the unboxing.",
+                "Return available only for damaged or wrong items received. Raise a return request within 24 hours of delivery with photo/video proof. Return shipping is customer’s responsibility unless it’s our mistake. No returns for used, mishandled, or physically damaged items.",
             },
             {
               title: "6. Warranty & Repair",
