@@ -24,10 +24,10 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4">
-            <a href="https://www.facebook.com/profile.php?id=61579811517732&sk=about"><Facebook className="w-5 h-5 hover:text-white" /></a>
-            <a href="https://www.instagram.com/torquetoyzz"><Instagram className="w-5 h-5 hover:text-white" /></a>
-            <a href="mailto:torquetoyzz@gmail.com"><Mail className="w-5 h-5 hover:text-white" /></a>
-            <a href="https://www.youtube.com/@torquetoyzz"><Youtube className="w-5 h-5 hover:text-white" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61579811517732&sk=about"  target='_blank'><Facebook className="w-5 h-5 hover:text-white" /></a>
+            <a href="https://www.instagram.com/torquetoyzz"  target='_blank'><Instagram className="w-5 h-5 hover:text-white" /></a>
+            <a href="mailto:torquetoyzz@gmail.com"  target='_blank'><Mail className="w-5 h-5 hover:text-white" /></a>
+            <a href="https://www.youtube.com/@torquetoyzz" target='_blank'><Youtube className="w-5 h-5 hover:text-white" /></a>
           </div>
         </div>
 

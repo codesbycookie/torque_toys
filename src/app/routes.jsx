@@ -11,8 +11,8 @@ import ProductDetail from "../pages/OurProducts/Components/ProductDetail";
 import CartPage from "../pages/Cart/CartPage";
 import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "../pages/TermsConditons/TermsConditons";
-import { CartProvider } from "../context/CartContext.jsx";
 import FloaterCart from "../pages/Components/FloaterCart";
+import { CartProvider } from "../context/CartContext.jsx";
 
 export default function AppRoutes() {
   const MainLayout = ({ children }) => (

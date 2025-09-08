@@ -5,6 +5,8 @@ import { useCart } from "../../context/CartContext"; // adjust import path if ne
 export default function FloaterCart() {
   const { cart } = useCart();
 
+  if(cart.length === 0) return null;
+  
   return (
     <Link
       to="/cart"
