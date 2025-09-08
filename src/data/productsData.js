@@ -90,7 +90,7 @@ export const homepage = {
       {
         id: 4,
         img: "/car4-1-removebg-preview.png",
-        name: "Die-cast Mercedes-Benz G-Wagon",
+        name: "Die-cast Mercedes-Benz 300SL Vintage",
         description: "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model. Designed for collectors and enthusiasts alike, this model captures the bold, boxy design and fine detailing of the real G-Class SUV.Crafted with a durable metal body and plastic parts for a realistic and sturdy finish.Front doors open smoothly, revealing a detailed interior for an authentic look and feel.Simply pull the car back, release, and watch it zoom forward—fun for kids and adults.From the signature grille to the realistic dashboard, every element is made with attention to detail.Ideal for collectors, display shelves, or imaginative play.",
         type: "Classic",
         price: ["1499", "1999"],
@@ -225,8 +225,8 @@ export const ourproductpage = {
         image: "/car4-1-removebg-preview.png",
         name: "Die-cast Mercedes-Benz G-Wagon",
         description:
-          "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model...",
-        Fulldescription: "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model. Designed for collectors and enthusiasts alike, this model captures the bold, boxy design and fine detailing of the real G-Class SUV.Crafted with a durable metal body and plastic parts for a realistic and sturdy finish.Front doors open smoothly, revealing a detailed interior for an authentic look and feel.Simply pull the car back, release, and watch it zoom forward—fun for kids and adults.From the signature grille to the realistic dashboard, every element is made with attention to detail.Ideal for collectors, display shelves, or imaginative play.",
+          "Rediscover timeless elegance with this 1:24 scale die-cast replica of the legendary Mercedes-Benz 300SL – an icon of vintage automotive design...",
+        Fulldescription: "Rediscover timeless elegance with this 1:24 scale die-cast replica of the legendary Mercedes-Benz 300SL – an icon of vintage automotive design. Crafted with attention to detail, this model blends classic styling with interactive features, making it perfect for collectors and car enthusiasts of all ages.Sturdy metal body with fine detailing and high-quality plastic components for a realistic vintage look.Pull the car back and release to watch it drive forward on its own – fun and engaging for all ages.Explore the intricate interior, engine bay, and storage compartment with fully functional parts.Front lights illuminate for a dynamic, lifelike appearance.Engine sounds and other realistic car audio effects activated for a more immersive experience",
         price: ["1499", "1999"],
       },
       {
@@ -361,26 +361,26 @@ export const ourproductpage = {
       {
         id: 21,
         image: "/car21-1-removebg-preview.png",
-        name: "1:46 BMW Rc Mini Drift Car | 4WD",
-        description: "Unleash the drift beast with this 1:46 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted...",
-        Fulldescription: "Unleash the drift beast with this 1:46 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted. Compact yet powerful, this RC drift car comes with fully proportional steering for ultra-smooth control, bright light functions, and slick tires for realistic sideways drifts.Built for style and performance, it’s the perfect pick for anyone who loves precision drifting in a pocket-sized powerhouse.1:46 Scale BMW Drift Car.Fully Proportional Steering for precise handling.Stunning Light Effects for night-time style.Smooth Drift Performance – true Drift King vibes.Inspired by NFS Most Wanted – A Car to Remember!",
+        name: "1:43 BMW Rc Mini Drift Car | 4WD",
+        description: "Unleash the drift beast with this 1:43 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted...",
+        Fulldescription: "Unleash the drift beast with this 1:43 scale BMW RC Car, inspired by the legends of Need for Speed: Most Wanted. Compact yet powerful, this RC drift car comes with fully proportional steering for ultra-smooth control, bright light functions, and slick tires for realistic sideways drifts.Built for style and performance, it’s the perfect pick for anyone who loves precision drifting in a pocket-sized powerhouse.1:43 Scale BMW Drift Car.Fully Proportional Steering for precise handling.Stunning Light Effects for night-time style.Smooth Drift Performance – true Drift King vibes.Inspired by NFS Most Wanted – A Car to Remember!",
         price: ["3699", "4999"]
       },
       {
         id: 22,
         image: "/car22-1-removebg-preview.png",
         name: "Rc Mini Car | 1:64 Scale",
-        description: "Unleash the drift beast with this 1:64 scale RC Mini Car, inspired by the legends of Need for Speed: Most Wanted...",
+        description: "Meet the future of mini RC cars! This 1:64 scale RC Mini Car comes with a premium alloy body...",
         Fulldescription: "Meet the future of mini RC cars! This 1:64 scale RC Mini Car comes with a premium alloy body, bright LED light function, and next-level smartphone control. Just connect via your Android or iOS app, and you're in full control — no remote needed.One of its coolest features? Draw your own path on the phone, and the car will follow it exactly — like magic.1:64 Scale Compact Design.Control via Android & iOS App.Draw & Drive Feature – Car follows your drawing.Stunning LED Lights for Realistic Look.Durable Alloy Body for Premium Feel.Perfect for Kids & Tech Lovers Alike.Small in size, big on features — the smartest mini RC car you’ll ever own!",
-        price: ["899", "1499 "]
+        price: ["849", "1449 "]
       },
       {
         id: 23,
         image: "/car23-1-removebg-preview.png",
-        name: "RMini Alloy Off-Road Rc car | 1:64",
-        description: "Unleash the drift beast with this 1:64 scale RC Mini Car, inspired by the legends of Need for Speed: Most Wanted...",
-        Fulldescription: "Meet the future of mini RC cars! This 1:64 scale RC Mini Car comes with a premium alloy body, bright LED light function, and next-level smartphone control. Just connect via your Android or iOS app, and you're in full control — no remote needed.One of its coolest features? Draw your own path on the phone, and the car will follow it exactly — like magic.1:64 Scale Compact Design.Control via Android & iOS App.Draw & Drive Feature – Car follows your drawing.Stunning LED Lights for Realistic Look.Durable Alloy Body for Premium Feel.Perfect for Kids & Tech Lovers Alike.Small in size, big on features — the smartest mini RC car you’ll ever own!",
-        price: ["899", "1499 "]
+        name: "Mini Alloy Off-Road Rc car | 1:64",
+        description: "Take on rough terrain with this powerful 1:64 scale Mini Off-Road RC Car...",
+        Fulldescription: "Take on rough terrain with this powerful 1:64 scale Mini Off-Road RC Car, designed with a rugged look and built for action. Featuring a durable alloy body, realistic off-road styling, and bright LED light function, this mini beast is ready to roll anywhere.Perfect for indoor fun or small outdoor challenges, it's a must-have for RC fans who love compact power.1:64 Scale Off-Road RC Car.Sturdy Alloy Body for Long-Lasting Play.Realistic Off-Road Look & Design.LED Light Function for Night Rides.Perfect for Kids & Collectors.Pocket-sized, yet packed with off-road attitude!",
+        price: ["849", "1449 "]
       },
       {
         id: 24,
