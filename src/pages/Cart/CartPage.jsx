@@ -433,7 +433,7 @@ export default function CartPage() {
                   <label htmlFor="agreeToTerms" className="text-sm text-gray-700">
                     Hereby I confirm that I have read the{" "}
                     <Link
-                      to="/terms-and-conditions"
+                      to="/terms-conditions"
                       className="underline text-black"
                     >
                       Terms and Conditions
