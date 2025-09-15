@@ -406,6 +406,38 @@ export const ourproductpage = {
         Fulldescription: "Experience next-level RC performance with this 1:16 scale racing machine, reaching thrilling speeds of up to 50km/h! Equipped with fully proportional steering and a real-car-like mechanism, this beast offers unmatched control, precision, and excitement.Whether you're racing straight or sliding sideways, the extra set of drift wheels lets you switch from speed to style in seconds. It's not just a toy — it’s a high-speed hobby-grade racer made for real thrill-seekers.Blazing 50km/h Top Speed.Fully Proportional Steering for smooth, accurate handling.Real Car Mechanism – Feels like the real deal.Extra Drift Wheels Included – Switch to drift mode anytime.1:16 Scale – Perfect balance of size and power.As Fast as Light – Built for serious speed lovers",
         price: ["8499", "14999"]
       },
+      {
+        id: 27,
+        image: "/car27-1-removebg-preview.png",
+        name: "Off-Roader RC Hammer Car | 1:20 scale",
+        description: "Crush any terrain with the RC Hammer Off-Roader – Power-packed, pocket-friendly",
+        Fulldescription: "Crush any terrain with the RC Hammer Off-Roader – Power-packed, pocket-friendly. 1:20 scale. Full charge. Full fun. All at an unbeatable price. Tough roads? No problem. Meet the RC Hammer – off-road beast at an affordable price. Off-road power, budget price. Recharge. Race. Repeat. RC Hammer at its best. Affordable. Durable. Unstoppable. That’s RC Hammer for you",
+        price: ["1099", "1999"]
+      },
+      {
+        id: 28,
+        image: "/car28-1-removebg-preview.png",
+        name: "R/C High Speed Drift Car | 1:16 Scale",
+        description: "Get ready to experience next-level drifting with our 1:16 scale high-speed RC drift car",
+        Fulldescription: "Get ready to experience next-level drifting with our 1:16 scale high-speed RC drift car, designed for ultimate performance and visual thrill. This hobby-grade machine features realistic smoke effects, allowing you to burn rubber and leave a trail just like the pros. With powerful motors, precise handling, and smooth 4-wheel drive control, this car delivers incredible drifts, high-speed chases, and edge-of-the-seat excitement on every run. The durable body and drift-specific tires are built to take on both indoor and outdoor tracks. Realistic smoke effect for true drift action. High-speed motor with precision control. 1:16 scale — perfect balance of size and power. Sturdy build with drift-ready tires. Rechargeable battery for extended playtime",
+        price: ["2799", "3499"]
+      },
+      {
+        id: 29,
+        image: "/car29-1-removebg-preview.png",
+        name: "R/C Drift Car | Spray System | 1:16 Scale",
+        description: "Get ready to experience next-level drifting with our 1:16 scale high-speed RC drift car",
+        Fulldescription: "Get ready to experience next-level drifting with our 1:16 scale high-speed RC drift car, designed for ultimate performance and visual thrill. This hobby-grade machine features realistic smoke effects, allowing you to burn rubber and leave a trail just like the pros. With powerful motors, precise handling, and smooth 4-wheel drive control, this car delivers incredible drifts, high-speed chases, and edge-of-the-seat excitement on every run. The durable body and drift-specific tires are built to take on both indoor and outdoor tracks. Realistic smoke effect for true drift action. High-speed motor with precision control. 1:16 scale — perfect balance of size and power. Sturdy build with drift-ready tires. Rechargeable battery for extended playtime",
+        price: ["2799", "3499"]
+      },
+      {
+        id: 30,
+        image: "/car30-1-removebg-preview.png",
+        name: "R/c Rock Crawler | Drift Tyres | Smoke Effect",
+        description: "Experience the perfect blend of power, style, and versatility with our high-performance Rock Crawler RC Car.",
+        Fulldescription: "Experience the perfect blend of power, style, and versatility with our high-performance Rock Crawler RC Car. Equipped with drift tyres for smooth sideways action and rock-crawling suspension for tackling tough terrains, this car is built for all kinds of adventures. Enjoy multiple control options for added flexibility — whether it's gesture sensing, remote control, or manual demo mode. The realistic smoke effect adds an exciting visual flair, while the demo mode puts on a full-action showcase with just one click. Rock crawler + drift combo for ultimate all-surface play. Multiple control modes (gesture, remote, demo). Smoke effect for a realistic driving experience. One-click demo mode — watch it show off on its own.Rechargeable battery for long-lasting fun. Durable design to handle off-road and indoor play",
+        price: ["1650", "2299"]
+      },
     ],
   },
 };
