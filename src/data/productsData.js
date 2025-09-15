@@ -218,7 +218,7 @@ export const ourproductpage = {
         description:
           "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model...",
         Fulldescription: "Mercedes-Benz G-Wagon in miniature form with this high-quality 1:24 scale die-cast model. Designed for collectors and enthusiasts alike, this model captures the bold, boxy design and fine detailing of the real G-Class SUV.Crafted with a durable metal body and plastic parts for a realistic and sturdy finish.Front doors open smoothly, revealing a detailed interior for an authentic look and feel.Simply pull the car back, release, and watch it zoom forward—fun for kids and adults.From the signature grille to the realistic dashboard, every element is made with attention to detail.Ideal for collectors, display shelves, or imaginative play.",
-        price: ["1499", "1999"],
+        price: ["1449", "1999"],
       },
       {
         id: 4,
@@ -227,7 +227,7 @@ export const ourproductpage = {
         description:
           "Rediscover timeless elegance with this 1:24 scale die-cast replica of the legendary Mercedes-Benz 300SL – an icon of vintage automotive design...",
         Fulldescription: "Rediscover timeless elegance with this 1:24 scale die-cast replica of the legendary Mercedes-Benz 300SL – an icon of vintage automotive design. Crafted with attention to detail, this model blends classic styling with interactive features, making it perfect for collectors and car enthusiasts of all ages.Sturdy metal body with fine detailing and high-quality plastic components for a realistic vintage look.Pull the car back and release to watch it drive forward on its own – fun and engaging for all ages.Explore the intricate interior, engine bay, and storage compartment with fully functional parts.Front lights illuminate for a dynamic, lifelike appearance.Engine sounds and other realistic car audio effects activated for a more immersive experience",
-        price: ["1499", "1999"],
+        price: ["1449", "1999"],
       },
       {
         id: 5,
@@ -292,7 +292,7 @@ export const ourproductpage = {
         name: "RC High Speed Drift Car - 1:16 | 30KM/h",
         description: "Get ready to burn rubber with this 1:16 scale RC Drift Car, engineered for performance and style!...",
         Fulldescription: "Get ready to burn rubber with this 1:16 scale RC Drift Car, engineered for performance and style! With proportional steering and an impressive 30 km/h top speed, this beast offers smooth handling and thrilling drifts. Comes with 4 racing tires and a speed adjustment button on the remote, giving you full control over every move.30 KM/H High-Speed Performance.Proportional Steering for Precise Control.Speed Adjustment Button on Remote. 4 Racing Drift Tires for Smooth Sliding.Rechargeable Battery for Long Playtime.1:16 Scale – Perfect Size for Drift Action.Whether you're racing or drifting, this car delivers adrenaline-packed fun for RC enthusiasts of all levels!",
-        price: ["2200", "2999"]
+        price: ["2299", "2999"]
       },
       {
         id: 13,
@@ -372,7 +372,7 @@ export const ourproductpage = {
         name: "Rc Mini Car | 1:64 Scale",
         description: "Meet the future of mini RC cars! This 1:64 scale RC Mini Car comes with a premium alloy body...",
         Fulldescription: "Meet the future of mini RC cars! This 1:64 scale RC Mini Car comes with a premium alloy body, bright LED light function, and next-level smartphone control. Just connect via your Android or iOS app, and you're in full control — no remote needed.One of its coolest features? Draw your own path on the phone, and the car will follow it exactly — like magic.1:64 Scale Compact Design.Control via Android & iOS App.Draw & Drive Feature – Car follows your drawing.Stunning LED Lights for Realistic Look.Durable Alloy Body for Premium Feel.Perfect for Kids & Tech Lovers Alike.Small in size, big on features — the smartest mini RC car you’ll ever own!",
-        price: ["849", "1449 "]
+        price: ["899", "1449 "]
       },
       {
         id: 23,
@@ -396,7 +396,7 @@ export const ourproductpage = {
         name: "Hurricane Rc car 4x4 | 50KM Speed | 1:16",
         description: "RC Hurricane Car, engineered for pure speed and power! With a top speed of 50km/h.",
         Fulldescription: "RC Hurricane Car, engineered for pure speed and power! With a top speed of 50km/h, real-car-like mechanism, and 4-wheel drive system, this hobby-grade model delivers unbeatable performance on any terrain.Equipped with a multiple light system and precision-built components, it's not just an RC car — it’s a lightning-fast machine made for thrill-seekers.Blazing 50km/h Top Speed – Hurricane-level fast.Realistic Car Mechanism – Just like a true sports car.4WD System for maximum traction and control.Multi-Light System for an aggressive look.Hobby-Grade Build – Durable, powerful, and precise.Designed for Speed – As fast as light, as fierce as a storm",
-        price: ["7749", "11999"]
+        price: ["7499", "11999"]
       },
       {
         id: 26,
