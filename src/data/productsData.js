@@ -438,6 +438,59 @@ export const ourproductpage = {
         Fulldescription: "Experience the perfect blend of power, style, and versatility with our high-performance Rock Crawler RC Car. Equipped with drift tyres for smooth sideways action and rock-crawling suspension for tackling tough terrains, this car is built for all kinds of adventures. Enjoy multiple control options for added flexibility — whether it's gesture sensing, remote control, or manual demo mode. The realistic smoke effect adds an exciting visual flair, while the demo mode puts on a full-action showcase with just one click. Rock crawler + drift combo for ultimate all-surface play. Multiple control modes (gesture, remote, demo). Smoke effect for a realistic driving experience. One-click demo mode — watch it show off on its own.Rechargeable battery for long-lasting fun. Durable design to handle off-road and indoor play",
         price: ["1650", "2299"]
       },
+
+
+
+
+
+      {
+        id: 31,
+        image: "/car31-1-removebg-preview.png",
+        name: "1:43 Nissan Skyline Rc Drift Car | 4WD",
+        description: "Get ready to relive the Fast & Furious vibes with this Nissan Skyline RC Drift Car",
+        Fulldescription: "Get ready to relive the Fast & Furious vibes with this Nissan Skyline RC Drift Car, designed in 1:43 scale for compact thrills and big-time performance! Featuring fully proportional steering for smooth, precise control, LED light effects for that street-racing look, and extra rubber drift tyres for insane corner slides — this is a must-have for RC and movie fans alike. Whether you're a beginner or a drift master, this Skyline delivers a realistic drifting experience in a pocket-sized package. It's more than just a toy — it's a tribute to speed, style, and street legends.",
+        price: ["3699", "4999"]
+      },
+      {
+        id: 32,
+        image: "/car32-1-removebg-preview.png",
+        name: "1:20 Scale Rc Drift Car | 4WD",
+        description: "Experience drifting like never before with this 1:20 Scale Benz RC Drift Car",
+        Fulldescription: "Experience drifting like never before with this 1:20 Scale Benz RC Drift Car, crafted for style, performance, and night-time action! Equipped with headlights, tail lights, and underbody downlights, this sleek machine doesn’t just drive — it puts on a show.Built for perfect drifts on every surface, its low-profile design and responsive control make it ideal for smooth slides and sharp turns. Whether you’re racing in daylight or lighting up the night, this Benz brings the drift scene to life!",
+        price: ["1849", "2499"]
+      },
+      {
+        id: 33,
+        image: "/car33-1-removebg-preview.png",
+        name: "Porsche Rc Drift Car | 4WD | 20km Speed",
+        description: "Take control of the streets with this stunning Porsche 911 RC Drift Car",
+        Fulldescription: "Take control of the streets with this stunning Porsche 911 RC Drift Car, designed for speed, precision, and eye-catching style. Featuring 4WD for smooth and powerful drifts, working headlights and taillights, and light control & speed control functions, this car gives you a complete driving experience.Drift around corners with confidence and light up your path like a real street racer. Whether you're a beginner or an RC enthusiast, this car delivers cool drifts, realistic looks, and top-tier control in every run.",
+        price: ["1949", "2799"]
+      },
+      {
+        id: 34,
+        image: "/car34-1-removebg-preview.png",
+        name: "Rc Ford Raptor | 1:10 Licenced Truck | 4WD",
+        description: "Ford Raptor RC Truck – Officially Licensed 4x4 Powerhouse! Unleash beast mode with the Ford Raptor RC Truck",
+        Fulldescription: "Ford Raptor RC Truck – Officially Licensed 4x4 Powerhouse! Unleash beast mode with the Ford Raptor RC Truck, an officially licensed 1:10 scale-inspired replica that delivers raw power and rugged performance! Built with 4WD super power and aggressive off-road styling, this RC truck is ready to dominate any terrain with ease. Whether it’s dirt, gravel, or rocky trails — the 4x4 traction, high-torque motor, and durable suspension make it a true off-road warrior. Feel the thrill of real truck power in your hands!",
+        price: ["14999", "19999"]
+      },
+      {
+        id: 35,
+        image: "/car35-1-removebg-preview.png",
+        name: "Remote Control Buggy | 20km speed | 2WD",
+        description: "RC Buggy – Small in Size, Beast in Performance. Don’t let the size fool you",
+        Fulldescription: "RC Buggy – Small in Size, Beast in Performance. Don’t let the size fool you — this 2WD RC Buggy hits up to 20km/h speed and comes with a realistic smoke effect that makes every run look wild and powerful! Built for action and styled for thrill, it's perfect for those who love compact cars with BIG attitude. Lightweight but aggressive, this buggy proves one thing loud and clear. Never underestimate a small car – it runs like a beast!",
+        price: ["1349", "1899"]
+      },
+      {
+        id: 36,
+        image: "/car36-1-removebg-preview.png",
+        name: "Rc Land Rover Defender Car | Cruise Control",
+        description: "RC Land Rover Defender – Built to Conquer, Designed to Impress.",
+        Fulldescription: "RC Land Rover Defender – Built to Conquer, Designed to Impress. Take adventure to the next level with this rugged RC Land Rover Defender, packed with power, control, and style! Equipped with 4WD for maximum grip, light change mode for dynamic looks, and cruise control for effortless long runs — it’s the perfect off-road companion. Experience smooth handling, real-time shock absorption, and  premium design inspired by the legendary Defender. Whether you're crawling over rough terrain or cruising through smooth tracks, this beast delivers every time. 4WD for superior off-road control. Light mode switch for added style. Cruise control for steady long runs. Smooth handling & real shock absorbers. Iconic Defender design",
+        price: ["5199", "6999"]
+      },
     ],
   },
 };
